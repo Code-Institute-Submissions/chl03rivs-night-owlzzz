@@ -3,13 +3,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap');
 
 /*General styles*/
-
-body {
-    background-color: #242748;
-    color: #cda716;
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
     font-family: "Kode Mono", monospace;
     font-weight: 900;
+}
+
+body {
+    min-height: 100vh;
     display: flex;
+    flex-direction: column;
+    /*Generic styles*/
+    background-color: #242748;
+    color: #cda716;
 }
 
 /*Header*/
@@ -17,23 +25,25 @@ body {
         background-color: #cda716;
         color: #242748;
         width: 100%;
-        text-align: center;
         position: fixed;
-        font-size: x-large;
+        padding: 0 10vh;
+        font-size: 120%;
+        z-index: 99;
+        align-items: baseline;
+        justify-content: space-between;
     }
 
     /*Nav bar*/
-    nav ul {
+    #nav-bar {
         list-style-type: none;
-        text-transform: capitalize;
     }
-
-    .active {
-        color: #55188b;
-    }
-
-    .active::marker {
-        font: var(--fa-font-regular);
-        content: "\f186";
-        display: inline-block;
-    }
+        /*Targets the active class for the current page's link*/
+        .active {
+            color: #55188b;
+        }
+        /*Adds moon icon next to active link*/
+        .active::marker {
+            font: var(--fa-font-regular);
+            content: "\f186";
+            display: inline-block;
+        }
