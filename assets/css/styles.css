@@ -29,13 +29,26 @@ body {
         padding: 0 10vh;
         font-size: 120%;
         z-index: 99;
-        align-items: baseline;
-        justify-content: space-between;
+        letter-spacing: 3px;
+        flex: 1;
+        display: flex;
+    }
+
+    /*Logo*/
+    .logo-img {
+        max-height: 30vh;
+        align-self: center;
+    }
+
+    .logo-text {
+        color: #242748;
+        text-decoration: none;
     }
 
     /*Nav bar*/
-    #nav-bar {
+    .nav-bar {
         list-style-type: none;
+        text-transform: uppercase;
     }
         /*Targets the active class for the current page's link*/
         .active {
@@ -47,3 +60,5 @@ body {
             content: "\f186";
             display: inline-block;
         }
+
+        
