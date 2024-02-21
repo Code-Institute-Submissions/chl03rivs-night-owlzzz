@@ -31,3 +31,9 @@ body {
     .active {
         color: #55188b;
     }
+
+    .active::marker {
+        font: var(--fa-font-regular);
+        content: "\f186";
+        display: inline-block;
+    }
