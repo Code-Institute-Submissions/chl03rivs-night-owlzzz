@@ -11,3 +11,23 @@ body {
     font-weight: 900;
     display: flex;
 }
+
+/*Header*/
+    header {
+        background-color: #cda716;
+        color: #242748;
+        width: 100%;
+        text-align: center;
+        position: fixed;
+        font-size: x-large;
+    }
+
+    /*Nav bar*/
+    nav ul {
+        list-style-type: none;
+        text-transform: capitalize;
+    }
+
+    .active {
+        color: #55188b;
+    }
