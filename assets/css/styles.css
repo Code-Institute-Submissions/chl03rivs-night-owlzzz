@@ -26,18 +26,29 @@ body {
         color: #242748;
         width: 100%;
         position: fixed;
-        padding: 0 10vh;
+        padding: 0;
         font-size: 120%;
         z-index: 99;
         letter-spacing: 3px;
-        flex: 1;
         display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    header a {
+        text-decoration: none;
+        color: #242748;
     }
 
     /*Logo*/
+    .logo {
+        order: 2;
+    }
+
     .logo-img {
         max-height: 30vh;
-        align-self: center;
+        padding: 0 2.5rem;
     }
 
     .logo-text {
@@ -46,19 +57,43 @@ body {
     }
 
     /*Nav bar*/
-    .nav-bar {
+    .nav-bar ul {
         list-style-type: none;
         text-transform: uppercase;
+        padding: 1.5rem;
+        display: flex;
+        flex-direction: row;
+        position: relative;
     }
         /*Targets the active class for the current page's link*/
         .active {
             color: #55188b;
+            text-decoration: underline;
         }
+
         /*Adds moon icon next to active link*/
         .active::marker {
             font: var(--fa-font-regular);
             content: "\f186";
-            display: inline-block;
+            right: -2px;
         }
 
-        
+        /*Reduces space between marker and active link*/
+        .nav-bar li {
+            padding: 0 1.5rem 0 0;
+        }
+
+        /*Arranges nav links equally around logo in header*/
+        .nav-bar, .logo {
+            justify-content: space-evenly;
+            width: fit-content;
+        }
+
+        .left-nav {
+            order: 1;
+        }
+
+        .right-nav {
+            order: 3;
+        }
+
