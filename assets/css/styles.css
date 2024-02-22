@@ -25,16 +25,15 @@ body {
         color: #cda716;
         width: 100%;
         position: fixed;
-        padding: 0;
+        padding: 1rem 0 3rem;
         font-size: 120%;
-        z-index: 99;
         letter-spacing: 3px;
         display: flex;
         justify-content: center;
         align-items: center;
         flex-wrap: wrap;
         /*Creates crescent moon shaped border below the header*/
-        border-bottom: 53px solid #cda716;
+        border-bottom: 3rem solid #cda716;
         border-radius: 0 0 60% 60%;
     }
 
@@ -51,19 +50,54 @@ body {
 
         #nav-toggle:checked~.nav-bar {
             display: block;
+            height: fit-content;
+            width: 100%;
+            position: absolute;
         }
 
+        /*Fixes the display of the nav blocks in the expanded menu*/
+        #nav-toggle:checked~.left-nav {
+            display: flex;
+            background: rgba(36, 39, 72, 1);
+            position: absolute;
+            order: 1;
+            top: 10%;
+        }
+
+        #nav-toggle:checked~.right-nav {
+            display: flex;
+            background: rgba(36, 39, 72, 1);
+            position: absolute;
+            order: 2;
+        }
+
+        #nav-toggle:checked~#nav-gap {
+            color: rgba(36, 39, 72, 1);
+        }
+
+        /*Styles hamburger icon*/
         #nav-icon {
             font-size: 2rem;
+            padding: 0 2rem;
+            z-index: 99;
+            position: absolute;
+            left: 0;
+            top: 5%;
         }
 
         /*Logo*/
         .logo {
             order: 2;
+            /*Flex properties to stack image and text on small screens*/
+            display: flex;
+            flex-direction: row;
+            align-content: flex-start;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
         }
 
         .logo-img {
-            max-height: 30vh;
+            height: 18rem;
         }
 
         .logo-text {
@@ -83,7 +117,7 @@ body {
         }
             /*Targets the active class for the current page's link*/
             .active {
-                color: #55188b;
+                color: #6e0cc4;
                 text-decoration: underline;
             }
 
@@ -100,6 +134,13 @@ body {
             }
 
 
+/* Media query: large/landscape phones (576px and up)*/
+@media screen and (min-width: 576px) {
+    .logo {
+        /*Stacks logo image and text on larger screens*/
+        flex-direction: column;
+    }
+}
 
 /*Media query for small laptop and larger screens (992px and up)*/
 @media screen and (min-width:992px) {
@@ -112,13 +153,14 @@ body {
         display: block;
     }
 
+    /*Add flex properties to nav elements*/
     .nav-bar ul {
         display: flex;
         flex-direction: row;
         position: relative;
     }
     /*Arranges nav links equally around logo in header*/
-    .nav-bar, .logo {
+    .nav-bar {
         justify-content: space-evenly;
         width: fit-content;
     }
