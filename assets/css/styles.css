@@ -22,8 +22,7 @@ body {
 
 /*Header*/
     header {
-        background-color: #cda716;
-        color: #242748;
+        color: #cda716;
         width: 100%;
         position: fixed;
         padding: 0;
@@ -34,66 +33,101 @@ body {
         justify-content: center;
         align-items: center;
         flex-wrap: wrap;
+        /*Creates crescent moon shaped border below the header*/
+        border-bottom: 53px solid #cda716;
+        border-radius: 0 0 60% 60%;
     }
 
     header a {
         text-decoration: none;
-        color: #242748;
+        color: #cda716;
     }
 
-    /*Logo*/
-    .logo {
-        order: 2;
+    /*Navigation*/
+        /*Toggle*/
+        #nav-toggle {
+            display: none;
+        }
+
+        #nav-toggle:checked~.nav-bar {
+            display: block;
+        }
+
+        #nav-icon {
+            font-size: 2rem;
+        }
+
+        /*Logo*/
+        .logo {
+            order: 2;
+        }
+
+        .logo-img {
+            max-height: 30vh;
+        }
+
+        .logo-text {
+            color: #cda716;
+            text-decoration: none;
+        }
+
+        /*Nav bar*/
+        nav {
+            display: none;
+        }
+
+        .nav-bar ul {
+            list-style-type: none;
+            text-transform: uppercase;
+            padding: 1.5rem;
+        }
+            /*Targets the active class for the current page's link*/
+            .active {
+                color: #55188b;
+                text-decoration: underline;
+            }
+
+            /*Adds moon icon next to active link*/
+            .active::marker {
+                font: var(--fa-font-regular);
+                content: "\f186";
+                right: -2px;
+            }
+
+            /*Reduces space between marker and active link*/
+            .nav-bar li {
+                padding: 0 1.5rem 0 0;
+            }
+
+
+
+/*Media query for small laptop and larger screens (992px and up)*/
+@media screen and (min-width:992px) {
+    /*Removes toggle button and adds expanded nav*/
+    #nav-icon, #nav-toggle {
+        display: none;
     }
 
-    .logo-img {
-        max-height: 30vh;
-        padding: 0 2.5rem;
+    nav {
+        display: block;
     }
 
-    .logo-text {
-        color: #242748;
-        text-decoration: none;
-    }
-
-    /*Nav bar*/
     .nav-bar ul {
-        list-style-type: none;
-        text-transform: uppercase;
-        padding: 1.5rem;
         display: flex;
         flex-direction: row;
         position: relative;
     }
-        /*Targets the active class for the current page's link*/
-        .active {
-            color: #55188b;
-            text-decoration: underline;
-        }
+    /*Arranges nav links equally around logo in header*/
+    .nav-bar, .logo {
+        justify-content: space-evenly;
+        width: fit-content;
+    }
 
-        /*Adds moon icon next to active link*/
-        .active::marker {
-            font: var(--fa-font-regular);
-            content: "\f186";
-            right: -2px;
-        }
+    .left-nav {
+        order: 1;
+    }
 
-        /*Reduces space between marker and active link*/
-        .nav-bar li {
-            padding: 0 1.5rem 0 0;
-        }
-
-        /*Arranges nav links equally around logo in header*/
-        .nav-bar, .logo {
-            justify-content: space-evenly;
-            width: fit-content;
-        }
-
-        .left-nav {
-            order: 1;
-        }
-
-        .right-nav {
-            order: 3;
-        }
-
+    .right-nav {
+        order: 3;
+    }
+}
