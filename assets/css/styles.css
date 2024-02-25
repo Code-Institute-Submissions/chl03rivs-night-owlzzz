@@ -29,7 +29,7 @@ body {
         z-index: 99;
         position: absolute;
         padding: 0 1rem 3rem;
-        font-size: 140%;
+        font-size: large;
         letter-spacing: 3px;
         display: flex;
         justify-content: center;
@@ -47,7 +47,7 @@ body {
     }
 
     /*Navigation*/
-        /*Toggle*/
+        /*Makes the toggle button (checkbox) invisible*/
         #nav-toggle {
             display: none;
         }
@@ -63,7 +63,6 @@ body {
         }
 
         #nav-toggle:checked~#nav-icon {
-            position: absolute;
             background: rgba(36, 39, 72, 0.9);
             width: 100%;
             height: 100vh;
@@ -86,10 +85,10 @@ body {
 
         /*Styles hamburger icon*/
         #nav-icon {
+            position: absolute;
             font-size: 2rem;
             padding: 0 2rem;
             z-index: 99;
-            position: absolute;
             left: 0;
             top: 5%;
         }
@@ -121,9 +120,10 @@ body {
 
         /*Nav bar*/
         nav {
+            /*Hides expanded navigation on mobile to prioritise the hamburger menu instead*/
             display: none;
         }
-
+        /*Makes link text grow bigger on hover*/
         nav li:hover {
             transform: scale(1.2);
         }
@@ -163,26 +163,51 @@ main {
     width: 100%;
 }
 
-    /*Style business introduction*/
+    /*Brief business introduction*/
     #intro {
-        border: 1px solid #c79306;
-        border-radius: 20%;
-        position: relative;
-        padding: 2rem;
-        position: relative;
+        padding: 1rem;
+        background-color: rgba(26, 29, 63, 0.9);
+        
     }
 
+    /*Style hero section to fit behind crescent shaped header*/
     #hero {  
-        position: absolute;
-        top: 153px;
-        flex: 1 0 auto;
-        z-index: 0;
-    }
+        position: relative;
+        top: -7vh;
+    }    
+     
     #hero img {
         height: 100%;
         width: 100%;
+         /*Creates crescent moon shaped border below the image*/
+         background-color: #242748;
+         border-bottom: 3rem solid #c79306;
+         border-radius: 0 0 60% 60%;
     }
 
+    /*Services cards*/
+    .services {
+        display: flex;
+        position: relative;
+        flex: 1;
+    }
+    /*Button animation*/
+    .button-animated {
+        background-color: #c79306;
+        color: #1a1d3f;
+        border-radius: 20%;
+        padding: 1px;
+    }
+
+    .button-animated:hover {
+        background-color: #6d087f
+    }
+
+    .button-animated:active {
+        background-color: #a80cc4;
+        box-shadow: 0 5px #e190dd;
+        transform: translateY(4px);
+    }
 /*Footer*/
 footer {
     display: flex;
@@ -234,6 +259,9 @@ footer {
 
 /*Media query for larger screens (1224px and up)*/
 @media screen and (min-device-width:1224px) {
+    header {
+        font-size: xx-large;
+    }
     /*Removes toggle button and adds expanded nav*/
     #nav-icon, #nav-toggle {
         display: none;
