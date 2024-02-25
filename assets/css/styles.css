@@ -14,35 +14,36 @@
 
 body {
     min-height: 100vh;
+    width: 100%;
     display: flex;
     flex-direction: column;
     /*Generic styles*/
-    background-color: #242748;
-    color: #cda716;
+    background-color: #1a1d3f;
+    color: #c79306;
 }
 
 /*Header*/
     header {
-        color: #cda716;
+        color: #c79306;
         width: 100%;
         z-index: 99;
-        position: fixed;
+        position: absolute;
         padding: 0 1rem 3rem;
-        font-size: 120%;
+        font-size: 140%;
         letter-spacing: 3px;
         display: flex;
         justify-content: center;
         align-items: center;
         flex-wrap: wrap;
         /*Creates crescent moon shaped border below the header*/
-        background-color: #242748;
-        border-bottom: 3rem solid #cda716;
+        background-color: #1a1d3f;
+        border-bottom: 3rem solid #c79306;
         border-radius: 0 0 60% 60%;
     }
 
     header a {
         text-decoration: none;
-        color: #cda716;
+        color: #c79306;
     }
 
     /*Navigation*/
@@ -50,6 +51,7 @@ body {
         #nav-toggle {
             display: none;
         }
+
         /*Adds background to the nav bar when toggled*/   
         #nav-toggle:checked~.nav-bar {
             display: grid;
@@ -59,9 +61,10 @@ body {
             top: 0;
             z-index: 99;
         }
+
         #nav-toggle:checked~#nav-icon {
             position: absolute;
-            background: rgba(36, 39, 72, 1);
+            background: rgba(36, 39, 72, 0.9);
             width: 100%;
             height: 100vh;
         }
@@ -111,15 +114,18 @@ body {
         }
 
         .logo-text {
-            color: #cda716;
+            color: #c79306;
             text-decoration: none;
             font-size: calc(17px + 3vw);
-            
         }
 
         /*Nav bar*/
         nav {
             display: none;
+        }
+
+        nav li:hover {
+            transform: scale(1.2);
         }
 
         .nav-bar ul {
@@ -129,7 +135,7 @@ body {
         }
             /*Targets the active class for the current page's link*/
             .active {
-                color: #6e0cc4;
+                color: #a80cc4;
                 text-decoration: underline;
             }
 
@@ -150,16 +156,39 @@ main {
     /* Enable flex properties for child elements */
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     /* Make main element take surplus space (instead of shrink) to push footer down */
     flex: 1 0 auto;
-    margin-top: 300px;
+    margin-top: calc(50px + 20vh);
+    width: 100%;
 }
+
+    /*Style business introduction*/
+    #intro {
+        border: 1px solid #c79306;
+        border-radius: 20%;
+        position: relative;
+        padding: 2rem;
+        position: relative;
+    }
+
+    #hero {  
+        position: absolute;
+        top: 153px;
+        flex: 1 0 auto;
+        z-index: 0;
+    }
+    #hero img {
+        height: 100%;
+        width: 100%;
+    }
 
 /*Footer*/
 footer {
     display: flex;
-    background-color: #cda716;
-    color: #242748;
+    position: relataive;
+    background-color: #c79306;
+    color: #1a1d3f;
     /*Flex properties to space out footer content*/
     flex-wrap: wrap;
     justify-content: space-around;
@@ -197,11 +226,11 @@ footer {
     #social-networks i {
         font-size: 160%;
         padding: 5%;
-        color: #6e0cc4;
+        color: #a80cc4;
     }
 
-/* Media query: large/landscape phones (576px and up)*/
-
+/* Media query: large/landscape phones (576px and up)
+@media screen and (min-width:576px) {*/
 
 /*Media query for larger screens (1224px and up)*/
 @media screen and (min-device-width:1224px) {
