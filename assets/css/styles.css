@@ -170,27 +170,44 @@ main {
         
     }
 
-    /*Style hero section to fit behind crescent shaped header*/
-    #hero {  
+    /*Cards*/
+    .cards {
+        display: flex;
+        flex-basis: 33%;
         position: relative;
-        top: -7vh;
-    }    
-     
-    #hero img {
-        height: 100%;
-        width: 100%;
-         /*Creates crescent moon shaped border below the image*/
-         background-color: #242748;
-         border-bottom: 3rem solid #c79306;
-         border-radius: 0 0 60% 60%;
+        flex: 1 0 auto;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        flex-direction: row;
+        align-items: center;
     }
 
-    /*Services cards*/
-    .services {
-        display: flex;
-        position: relative;
-        flex: 1;
-    }
+        /*Add background image to intro paragraph*/
+        #intro {  
+            background-image: url("../images/home-page/chess-and-muffin.webp");
+            background-size: cover;
+            background-blend-mode: overlay;
+        }   
+        /*Creates different coloured cards to list the services*/
+        #services-games, #services-bar, #services-books {
+            background-color: #c79306;
+            color: #1a1d3f;
+            flex-direction: column;
+            line-height: 20px;
+            border-radius: 0 0 60% 60%;
+            min-height: 20rem;
+        }
+
+        #services-food, #services-wifi, #intro {
+            background-color: #1a1d3f;
+            border-bottom: 21px solid #c79306;
+            color: #c79306;
+            flex-direction: column;
+            line-height: 20px;
+            border-radius: 0 0 60% 60%;
+            min-height: 20rem;
+        }
+
     /*Button animation*/
     .button-animated {
         background-color: #c79306;
@@ -259,6 +276,7 @@ footer {
 
 /*Media query for larger screens (1224px and up)*/
 @media screen and (min-device-width:1224px) {
+    /*Adjusts header's font size*/
     header {
         font-size: xx-large;
     }
@@ -289,5 +307,16 @@ footer {
 
     .right-nav {
         order: 3;
+    }
+
+    /*Changes the flex display of services cards*/
+    #services-games, #services-bar, #services-books {
+        flex-direction: row;
+        margin: 20px;
+    }
+
+    #services-food, #services-wifi {
+        flex-direction: row;
+        margin: 20px;
     }
 }
