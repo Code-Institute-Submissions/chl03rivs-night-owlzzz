@@ -15,7 +15,6 @@
         background-color: #c79306;
         color: #1a1d3f;
         border-radius: 20%;
-        padding: 1rem;
     }
     .button-animated:hover {
         background-color: #6d087f
@@ -151,6 +150,7 @@ body {
 
 /*Main content*/
 main {
+    text-align: justify;
     /* Enable flex properties for child elements */
     display: flex;
     flex-direction: column;
@@ -159,6 +159,12 @@ main {
     flex: 1 0 auto;
     margin-top: calc(50px + 20vh); /*Calculates top margin based on viewport height*/
     width: 100%;
+}
+hr {
+    width: 60%;
+    align-self: center;
+    border-block-color: #c79306;
+    margin: 2rem 0;
 }
     /*Styles hero image*/
     #hero {
@@ -245,6 +251,10 @@ main {
         flex-wrap: wrap;
         padding: 2rem;
         line-height: 1.5;
+        font-size: 120%;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
     }
     #come-visit p, #come-visit h2 {
         padding-bottom: 1rem;
@@ -257,10 +267,12 @@ main {
             text-decoration: none;
             color: #1a1d3f;
             text-transform: uppercase;
+            font-size: 120%;
         }
         #come-visit button {
-            width: 30%;
+            width: 60%;
             height: 7vh;
+            margin: 4%;
         }
 
 /*Footer*/
@@ -315,6 +327,17 @@ footer {
     #hero-right, #hero-left {
         font-size: 2.5vw;
     }
+    /*Come visit us section*/
+        /*Changes flex display of the visit us section on larger screens*/
+        #come-visit {
+            flex-direction: row;
+        }
+        /*Adjusts button width to fit larger screens*/
+        #come-visit button {
+            width: 22%;
+            height: 7vh;
+            margin: 4%;
+        }
 }    
 
 /*Media query for larger screens (1224px and up)*/
