@@ -15,7 +15,7 @@
         background-color: #c79306;
         color: #1a1d3f;
         border-radius: 20%;
-        padding: 1px;
+        padding: 1rem;
     }
     .button-animated:hover {
         background-color: #6d087f
@@ -160,8 +160,8 @@ main {
     margin-top: calc(50px + 20vh); /*Calculates top margin based on viewport height*/
     width: 100%;
 }
-    /*Brief business introduction*/
-    #intro {
+    /*Styles hero image*/
+    #hero {
         top: -25vh;
         padding: 10rem 0 0;
         background-color: #1a1d3f;
@@ -169,20 +169,38 @@ main {
         min-height: 15rem;
         width: 100%;
     }   
-    #intro p {
-        position: relative;
-        font-size: 150%;
-        margin: 1rem 2rem;
-        line-height: 1.5;
-        padding: 5rem 2rem 0;
-    }
-    #intro img {
+    #hero img {
         height: 100%;
         width: 100%;
          /*Creates crescent moon shaped border below the image*/
          background-color: #242748;
          border-bottom: 3rem solid #c79306;
          border-radius: 0 0 60% 60%;
+    }
+    /*Styling the tagline*/
+    #hero-right, #hero-left {
+        position: absolute;
+        background: rgba(36, 39, 72, 0.9);
+        padding: 2%;
+        width: 30vw;
+        border-radius: 16%;
+        font-size: 5vw;
+        line-height: 1;
+    }
+    #hero-left {
+        left: 2vw;
+    }
+    #hero-right {
+        right: 2vw;
+    }
+
+    /*Brief business introduction*/
+    #intro {
+        position: relative;
+        font-size: 150%;
+        margin: 1rem 2rem;
+        line-height: 1.5;
+        padding: 2rem 0;
     }
     /*Cards to display services*/
     #cards-title {
@@ -220,6 +238,29 @@ main {
             border-radius: 0 0 60% 60%;
             min-height: 15rem;
             width: 17rem;
+        }
+    /*Come visit us section*/
+    #come-visit {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 2rem;
+        line-height: 1.5;
+    }
+    #come-visit p, #come-visit h2 {
+        padding-bottom: 1rem;
+        padding-right: 6vw;
+        width: 60%;
+        text-align: justify;
+    }
+        /*Bookings link/button in "come visit us" section*/
+        #bookings-link {
+            text-decoration: none;
+            color: #1a1d3f;
+            text-transform: uppercase;
+        }
+        #come-visit button {
+            width: 30%;
+            height: 7vh;
         }
 
 /*Footer*/
@@ -268,8 +309,13 @@ footer {
         color: #a80cc4;
     }
 
-/* Media query: large/landscape phones (576px and up)
-@media screen and (min-width:576px) {*/
+/* Media query: large/landscape phones (576px and up)*/
+@media screen and (min-width:576px) {
+    /*Reduces the size of the tagline text on larger screens to look cleaner*/
+    #hero-right, #hero-left {
+        font-size: 2.5vw;
+    }
+}    
 
 /*Media query for larger screens (1224px and up)*/
 @media screen and (min-device-width:1224px) {
