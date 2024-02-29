@@ -156,7 +156,6 @@ main {
     flex-direction: column;
     flex-wrap: wrap;
     /* Make main element take surplus space (instead of shrink) to push footer down */
-    flex: 1 0 auto;
     margin-top: calc(50px + 20vh); /*Calculates top margin based on viewport height*/
     width: 100%;
 }
@@ -166,13 +165,10 @@ hr {
     border-block-color: #c79306;
     margin: 2rem 0;
 }
+/*Styles for Index.html page*/
     /*Styles hero image*/
     #hero {
-        top: -25vh;
-        padding: 10rem 0 0;
         background-color: #1a1d3f;
-        line-height: 20px;
-        min-height: 15rem;
         width: 100%;
     }   
     #hero img {
@@ -274,6 +270,23 @@ hr {
             height: 7vh;
             margin: 4%;
         }
+/*Styles for Bookings.html page*/
+    #hero h2 {
+        position: absolute;
+        background: rgba(36, 39, 72, 0.9);
+        padding: 2%;
+        width: 30vw;
+        border-radius: 16%;
+        font-size: 5vw;
+        line-height: 1;
+    }
+    /*Booking options*/
+    #booking-options {
+        display: flex;
+    }
+    #option1, #option2, #option3 {
+        justify-content: space-evenly;
+    }
 
 /*Footer*/
 footer {
