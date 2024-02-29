@@ -301,7 +301,11 @@ hr {
         padding: 1rem;
         border-radius: 5%;
         display: flex;
-        flex-wrap: nowrap;
+        flex-wrap: wrap;
+        width: 100vw;
+        flex: 1 0 auto;
+        justify-content: space-evenly;
+        flex-direction: row;
     }
     #booking-options hr {
         margin: 0.5rem; /*Reduces the space around the hr line*/
@@ -316,8 +320,9 @@ hr {
         font-size: 105%;
         margin: 1rem;
         padding: 1.5rem;
+        min-height: 15rem;
+        width: 17rem;
         display: flex;
-        flex-basis: 33%;
         flex-wrap: wrap;
         align-items: center;
         justify-content: center;
