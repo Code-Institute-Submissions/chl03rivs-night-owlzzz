@@ -10,10 +10,18 @@
     font-weight: 900;
     list-style-type: none;
 }
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    /*Generic styles*/
+    background-color: #1a1d3f;
+    color: #c79306;
+}
 p {
     text-align: justify;
-    align-self: center;
-    padding: 1rem;
+    line-height: 2;
+    padding: 1rem 3rem;
 }
     /*Button animation based on the W3Schools documentation here: https://www.w3schools.com/css/css3_buttons.asp#:~:text=Try%20it%20Yourself%20%C2%BB-,Animated%20Buttons,-Example */
     .button-animated {
@@ -29,15 +37,6 @@ p {
         box-shadow: 0 5px #e190dd;
         transform: translateY(4px);
     }
-body {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    /*Generic styles*/
-    background-color: #1a1d3f;
-    color: #c79306;
-}
-
 /*Header*/
 header {
     color: #c79306;
@@ -285,7 +284,11 @@ hr {
         line-height: 1;
     }
     #phone {
-        
+        display: inline-block;
+        color: #1a1d3f;
+        background-color: #e190dd;
+        padding: 0.5rem;
+        border-radius: 15%;
     }
     /*Booking options*/
     #booking-options {
@@ -298,7 +301,7 @@ hr {
 /*Footer*/
 footer {
     display: flex;
-    position: relataive;
+    position: relative;
     background-color: #c79306;
     color: #1a1d3f;
     /*Flex properties to space out footer content*/
@@ -306,17 +309,17 @@ footer {
     justify-content: space-around;
     align-items: center;
 }
-
     /*Business Address*/
     #address {
         order: 1;
     }
-
+    #address p {
+        line-height: 0.1;  
+    }
     /*Opening hours*/
     #opening-hours {
         order: 3;
     }
-
     /*Social icons and bottom logo*/
     #branding {
         order: 2;
