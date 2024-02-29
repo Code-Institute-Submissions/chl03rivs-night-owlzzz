@@ -18,10 +18,19 @@ body {
     background-color: #1a1d3f;
     color: #c79306;
 }
+h3 {
+    text-align: center;
+    text-transform: uppercase;
+}
 p {
     text-align: justify;
     line-height: 2;
     padding: 1rem 3rem;
+}
+li {
+    /*Styling to ensure there is enough space between list marker and text when enabled*/
+    position: relative;
+    padding-left: 10px;
 }
     /*Button animation based on the W3Schools documentation here: https://www.w3schools.com/css/css3_buttons.asp#:~:text=Try%20it%20Yourself%20%C2%BB-,Animated%20Buttons,-Example */
     .button-animated {
@@ -132,9 +141,7 @@ header a {
         transform: scale(1.2);
     }
     .nav-bar ul {
-        list-style-type: none;
         text-transform: uppercase;
-        padding: 1.5rem;
     }
         /*Targets the active class for the current page's link*/
         .active {
@@ -145,11 +152,10 @@ header a {
         .active::marker {
             font: var(--fa-font-regular);
             content: "\f186";
-            right: -2px;
         }
         /*Reduces space between marker and active link*/
         .nav-bar li {
-            padding: 0 1.5rem 0 0;
+            padding: 0 2.5rem 0 0;
         }
 
 /*Main content*/
@@ -198,7 +204,6 @@ hr {
     #hero-right {
         right: 2vw;
     }
-
     /*Brief business introduction*/
     #intro {
         position: relative;
@@ -292,12 +297,38 @@ hr {
     }
     /*Booking options*/
     #booking-options {
+        background-color: #c79306;
+        padding: 1rem;
+        border-radius: 5%;
         display: flex;
+        flex-wrap: nowrap;
+    }
+    #booking-options hr {
+        margin: 0.5rem; /*Reduces the space around the hr line*/
+    }
+    #booking-options p {
+        line-height: 1;
+        padding: 0 0 1rem; /*Override general padding settings*/
     }
     #option1, #option2, #option3 {
-        justify-content: space-evenly;
+        background-color: #1a1d3f;
+        border-radius: 5%;
+        font-size: 105%;
+        margin: 1rem;
+        padding: 1.5rem;
+        display: flex;
+        flex-basis: 33%;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        align-content: center;
     }
-
+    /*Styles list items markers*/
+    #booking-options li::marker, #booking-details li::marker {
+        /*Adds moon icon in place of the bullet point following the documentation of Font Awesome here: https://origin.fontawesome.com/docs/web/add-icons/pseudo-elements#font-families-and-styles-cheat-sheet */
+        font: var(--fa-font-regular);
+        content: "\f186";
+    }
 /*Footer*/
 footer {
     display: flex;
