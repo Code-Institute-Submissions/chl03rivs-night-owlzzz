@@ -10,6 +10,11 @@
     font-weight: 900;
     list-style-type: none;
 }
+p {
+    text-align: justify;
+    align-self: center;
+    padding: 1rem;
+}
     /*Button animation based on the W3Schools documentation here: https://www.w3schools.com/css/css3_buttons.asp#:~:text=Try%20it%20Yourself%20%C2%BB-,Animated%20Buttons,-Example */
     .button-animated {
         background-color: #c79306;
@@ -34,119 +39,119 @@ body {
 }
 
 /*Header*/
-    header {
-        color: #c79306;
-        width: 100%;
-        z-index: 99;
-        position: absolute;
-        padding: 0 1rem 3rem;
-        font-size: large;
-        letter-spacing: 3px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-wrap: wrap;
-        /*Creates crescent moon shaped border below the header*/
-        background-color: #1a1d3f;
-        border-bottom: 3rem solid #c79306;
-        border-radius: 0 0 60% 60%;
-    }
-    header a {
-        text-decoration: none;
-        color: #c79306;
-    }
+header {
+    color: #c79306;
+    width: 100%;
+    z-index: 99;
+    position: absolute;
+    padding: 0 1rem 3rem;
+    font-size: large;
+    letter-spacing: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    /*Creates crescent moon shaped border below the header*/
+    background-color: #1a1d3f;
+    border-bottom: 3rem solid #c79306;
+    border-radius: 0 0 60% 60%;
+}
+header a {
+    text-decoration: none;
+    color: #c79306;
+}
     /*Navigation*/
-        /*Makes the toggle button (checkbox) invisible*/
-        #nav-toggle {
-            display: none;
+    /*Makes the toggle button (checkbox) invisible*/
+    #nav-toggle {
+        display: none;
+    }
+    /*Adds background to the nav bar when toggled*/   
+    #nav-toggle:checked~.nav-bar {
+        display: grid;
+        justify-content: start;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        z-index: 99;
+    }
+    #nav-toggle:checked~#nav-icon {
+        background: rgba(36, 39, 72, 0.9);
+        width: 100%;
+        height: 100vh;
+    }
+    /*Fixes the display of the nav blocks in the expanded menu*/
+    #nav-toggle:checked~.left-nav {
+        position: fixed;
+        order: 1;
+        top: 6rem;
+        align-content: start;
+    }
+    #nav-toggle:checked~.right-nav {
+        order: 2;
+        align-content: start;
+        position: fixed;
+        top: 11rem;
+    }
+    /*Styles hamburger icon*/
+    #nav-icon {
+        position: absolute;
+        font-size: 2rem;
+        padding: 0 2rem;
+        z-index: 99;
+        left: 0;
+        top: 5%;
+    }
+    /*Logo*/
+    .logo {
+        order: 2;
+        /*Flex properties to stack image and text on small screens*/
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .logo-img {
+        height: auto;
+        width: 50%;
+        max-width: 200px;
+        padding-top: 1rem;
+        position: relative;
+    }
+    .logo-text {
+        color: #c79306;
+        text-decoration: none;
+        font-size: calc(17px + 3vw);
+    }
+    /*Nav bar*/
+    nav {
+        /*Hides expanded navigation on mobile to prioritise the hamburger menu instead*/
+        display: none;
+    }
+    /*Makes link text grow bigger on hover*/
+    nav li:hover {
+        transform: scale(1.2);
+    }
+    .nav-bar ul {
+        list-style-type: none;
+        text-transform: uppercase;
+        padding: 1.5rem;
+    }
+        /*Targets the active class for the current page's link*/
+        .active {
+            color: #a80cc4;
+            text-decoration: underline;
         }
-        /*Adds background to the nav bar when toggled*/   
-        #nav-toggle:checked~.nav-bar {
-            display: grid;
-            justify-content: start;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            z-index: 99;
+        /*Adds moon icon next to active link following the documentation of Font Awesome here: https://origin.fontawesome.com/docs/web/add-icons/pseudo-elements#font-families-and-styles-cheat-sheet */
+        .active::marker {
+            font: var(--fa-font-regular);
+            content: "\f186";
+            right: -2px;
         }
-        #nav-toggle:checked~#nav-icon {
-            background: rgba(36, 39, 72, 0.9);
-            width: 100%;
-            height: 100vh;
+        /*Reduces space between marker and active link*/
+        .nav-bar li {
+            padding: 0 1.5rem 0 0;
         }
-        /*Fixes the display of the nav blocks in the expanded menu*/
-        #nav-toggle:checked~.left-nav {
-            position: fixed;
-            order: 1;
-            top: 6rem;
-            align-content: start;
-        }
-        #nav-toggle:checked~.right-nav {
-            order: 2;
-            align-content: start;
-            position: fixed;
-            top: 11rem;
-        }
-        /*Styles hamburger icon*/
-        #nav-icon {
-            position: absolute;
-            font-size: 2rem;
-            padding: 0 2rem;
-            z-index: 99;
-            left: 0;
-            top: 5%;
-        }
-        /*Logo*/
-        .logo {
-            order: 2;
-            /*Flex properties to stack image and text on small screens*/
-            display: flex;
-            flex-wrap: nowrap;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-        }
-        .logo-img {
-            height: auto;
-            width: 50%;
-            max-width: 200px;
-            padding-top: 1rem;
-            position: relative;
-        }
-        .logo-text {
-            color: #c79306;
-            text-decoration: none;
-            font-size: calc(17px + 3vw);
-        }
-        /*Nav bar*/
-        nav {
-            /*Hides expanded navigation on mobile to prioritise the hamburger menu instead*/
-            display: none;
-        }
-        /*Makes link text grow bigger on hover*/
-        nav li:hover {
-            transform: scale(1.2);
-        }
-        .nav-bar ul {
-            list-style-type: none;
-            text-transform: uppercase;
-            padding: 1.5rem;
-        }
-            /*Targets the active class for the current page's link*/
-            .active {
-                color: #a80cc4;
-                text-decoration: underline;
-            }
-            /*Adds moon icon next to active link following the documentation of Font Awesome here: https://origin.fontawesome.com/docs/web/add-icons/pseudo-elements#font-families-and-styles-cheat-sheet */
-            .active::marker {
-                font: var(--fa-font-regular);
-                content: "\f186";
-                right: -2px;
-            }
-            /*Reduces space between marker and active link*/
-            .nav-bar li {
-                padding: 0 1.5rem 0 0;
-            }
 
 /*Main content*/
 main {
@@ -186,7 +191,6 @@ hr {
         padding: 2%;
         width: 30vw;
         border-radius: 16%;
-        font-size: 5vw;
         line-height: 1;
     }
     #hero-left {
@@ -279,6 +283,9 @@ hr {
         border-radius: 16%;
         font-size: 5vw;
         line-height: 1;
+    }
+    #phone {
+        
     }
     /*Booking options*/
     #booking-options {
