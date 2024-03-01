@@ -201,6 +201,43 @@ main li::marker {
     top: 1rem;
     box-shadow: 0px -15px 15px 20px #1a1d3f;
 }
+/*Creats cards to display services and food & drinks menu*/
+#cards-title {
+    text-transform: uppercase;
+    padding: 1.5rem;
+    font-size: 1.5rem;
+    align-self: center;
+}
+.cards {
+    display: flex;
+    position: relative;
+    flex: 1 0 auto;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+}
+    /*Creates different coloured cards*/
+    #services-games, #services-bar, #services-books {
+        background-color: #c79306;
+        color: #1a1d3f;
+        flex-direction: column;
+        line-height: 20px;
+        border-radius: 0 0 60% 60%;
+        min-height: 15rem;
+        width: 17rem;
+    }
+    #services-food, #services-wifi {
+        background-color: #1a1d3f;
+        border-bottom: 21px solid #c79306;
+        border-top: 1px solid #c79306;
+        color: #c79306;
+        flex-direction: column;
+        line-height: 20px;
+        border-radius: 0 0 60% 60%;
+        min-height: 15rem;
+        width: 17rem;
+    }
 
 /*Styles for Index.html page*/
     /*Styling the tagline on hero image*/
@@ -225,43 +262,6 @@ main li::marker {
         line-height: 1.5;
         padding: 2rem 0;
     }
-    /*Cards to display services*/
-    #cards-title {
-        text-transform: uppercase;
-        padding: 1.5rem;
-        font-size: 1.5rem;
-        align-self: center;
-    }
-    .cards {
-        display: flex;
-        position: relative;
-        flex: 1 0 auto;
-        justify-content: space-evenly;
-        flex-wrap: wrap;
-        flex-direction: row;
-        align-items: center;
-    }
-        /*Creates different coloured cards to list the services*/
-        #services-games, #services-bar, #services-books {
-            background-color: #c79306;
-            color: #1a1d3f;
-            flex-direction: column;
-            line-height: 20px;
-            border-radius: 0 0 60% 60%;
-            min-height: 15rem;
-            width: 17rem;
-        }
-        #services-food, #services-wifi {
-            background-color: #1a1d3f;
-            border-bottom: 21px solid #c79306;
-            border-top: 1px solid #c79306;
-            color: #c79306;
-            flex-direction: column;
-            line-height: 20px;
-            border-radius: 0 0 60% 60%;
-            min-height: 15rem;
-            width: 17rem;
-        }
     /*Come visit us section*/
     #come-visit {
         display: flex;
