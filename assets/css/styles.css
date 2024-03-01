@@ -184,7 +184,6 @@ main li::marker {
     font: var(--fa-font-regular);
     content: "\f186";
 }
-
 /*Styles hero images*/
 #hero {
     width: 100%;
@@ -344,6 +343,9 @@ main li::marker {
         border: 1px solid #c79306;
         border-radius: 20px;
         padding: 2rem;
+        margin-bottom: 2rem;
+        width: 70%;
+        align-self: center;
     }
     #booking-details h2 {
         padding-bottom: 1rem;
