@@ -350,7 +350,15 @@ main li::marker {
     #booking-details h2 {
         padding-bottom: 1rem;
     }
-
+    /*Booking inquiry form*/
+    #inquiry-form {
+        background-color: #c79306;
+        color: #1a1d3f;
+        align-self: center;
+        padding: 1rem;
+        margin-bottom: 2rem;
+        border-radius: 10px;
+    }
 /*Footer*/
 footer {
     display: flex;

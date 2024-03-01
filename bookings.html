@@ -103,6 +103,69 @@
             </ul>
         </div>
 
+        <form method="post" id="inquiry-form">
+            <fieldset>
+                <legend>Booking inquiry</legend>
+                <fieldset>
+                    <legend>About your group</legend>
+                    <label for="members">Party members:</label>
+                    <input type="number" id="members" class="members" required>
+                    <br>
+                    <label for="booking-type">Booking type:</label>
+                        <label for="reservation">Area reservation</label>
+                        <input type="radio" name="booking-type" id="reservation" value="Reservation" required>
+                        <label for="private">Private room</label>
+                        <input type="radio" name="booking-type" id="private" value="Private" required>
+                    <br>
+                    <label for="recurring">Would this be a recurring booking?</label>
+                        <label for="yes">Yes</label>
+                        <input type="radio" name="recurring" id="yes" value="Yes" required>
+                        <label for="no">No</label>
+                        <input type="radio" name="recurring" id="no" value="No" required>
+                    <br>
+                    <label for="frequency">If yes, at what frequency?</label>
+                    <input list="frequency" name="frequency" id="frequency">
+                        <datalist id="frequency">
+                            <option value="weekly">Weekly</option>
+                            <option value="bi-weekly">Bi-weekly</option>
+                            <option value="monthly">Monthly</option>
+                            <option value="bi-monthly">Bi-monthly</option>
+                            <option value="quarterly">Quarterly</option>
+                        </datalist>
+                    <br>
+                    <label for="length">How much time will you require?</label>
+                    <input type="time" id="length" name="length">
+                    <br>
+                    <label for="date">What date?</label>
+                    <input type="date" id="date" name="date" required>
+                    <br>
+                    <label for="time">What time?</label>
+                    <input type="time" id="time" name="time" required>
+                    <br>
+                </fieldset>
+                <fieldset>
+                    <legend>About you</legend>
+                    <label for="f-name">First name:</label>
+                    <input type="text" id="f-name" name="f-name" required>
+                    <br>
+                    <label for="l-name">Last name:</label>
+                    <input type="text" id="l-name" name="l-name" required>
+                    <br>
+                    <label for="email">Email address:</label>
+                    <input type="email" id="email" name="email" required>
+                    <br>
+                    <label for="phone-number">Phone number:</label>
+                    <input type="number" id="phone-number" name="phone-number">
+                    <br>
+                </fieldset>
+                <fieldset>
+                    <legend>Additional information</legend>
+                    <label for="notes">You can type out any additional information, questions or special requests you might have below:</label>
+                    <br>
+                    <textarea id="notes" name="notes"></textarea>
+                </fieldset>
+            </fieldset>
+        </form>
         
         <!--Embedded Google Map-->
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2461.859429406296!2d-8.47064992348061!3d51.9000293719052!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4844900e54e6370d%3A0xe7f166aab1e1dbf!2sMerchant&#39;s%20Quay%2C%20Centre%2C%20Cork!5e0!3m2!1sen!2sie!4v1708970649845!5m2!1sen!2sie" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" aria-label="map of Cork city showing the business's location on Merchant's quay"></iframe>
