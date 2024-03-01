@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Meta data for Search Engines-->
+    <meta name="description" content="Night Owlzzz. Late night café and non-alcoholic bar in Cork for board games lovers. Cosy, chill, space for reading and playing games.">
+    <meta name="keywords" content="night owlzzz, café, cork city, board games, non-alcoholic pub, mocktails">
+
+    <!--Title-->
+    <title>Night Owlzzz</title>
+
+    <!--Favicon designed with Canva.com and generated with https://favicon.io/favicon-converter/-->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
+    <link rel="manifest" href="assets/images/favicon/site.webmanifest">
+</head>
+
+<body>
+    <header>
+         <!--Logo-->
+         <div class="logo">
+            <a class="logo" href="./index.html">
+                <img class="logo-img" src="./assets/images/logo.png" alt="Night Owlzzz logo, an owl holding a cup of coffee in its claws">
+                <h1 class="logo-text">Night Owlzzz</h1>
+            </a>
+        </div>
+        <!--Navigation-->
+            <!--Navigation toggle-->
+            <input type="checkbox" name="nav-toggle" id="nav-toggle">
+            <label for="nav-toggle" id="nav-icon">
+                <!--Font Awesome Hamburger menu icon-->
+                <i class="fa-solid fa-bars"></i>
+            </label>
+
+            <!--Nav bar-->
+            <nav class="nav-bar left-nav">
+                <ul>
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./menu.html">Menu</a></li>
+                    <li><a href="./games.html">Games</a></li>
+                </ul>
+            </nav>
+            <nav class="nav-bar right-nav">
+                <ul>
+                    <li class="active"><a href="./faq.html">FAQ</a></li>
+                    <li><a href="./bookings.html">Bookings</a></li>
+                    <li><a href="./about.html">About</a></li>
+                </ul>
+            </nav>
+    </header>
+
+    <main>
+        Main content
+
+        <!--Simple call to action with a button linking to an internal page for information on reservations-->
+        <div id="come-visit">
+            <h2>Come visit us!</h2>
+            <p>Walk-ins are always welcome during opening hours, but you can book a table ahead of time to make sure that there is enough space for your group. We also have private rooms available upstairs for parties or focused game sessions.</p>
+            <button class="button-animated"> <a href="./bookings.html" id="bookings-link">To the bookings page<i class="fa-solid fa-arrow-right-long"></i></a></button>
+        </div>
+        
+        <!--Embedded Google Map with a yellow border on top to better fit in our aesthetics-->
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2461.859429406296!2d-8.47064992348061!3d51.9000293719052!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4844900e54e6370d%3A0xe7f166aab1e1dbf!2sMerchant&#39;s%20Quay%2C%20Centre%2C%20Cork!5e0!3m2!1sen!2sie!4v1708970649845!5m2!1sen!2sie" width="100%" height="450" style="border-top:2rem solid #c79306;;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" aria-label="map of Cork city showing the business's location on Merchant's quay"></iframe>
+    </main>
+
+    <footer>
+        <!--Business Address-->
+        <div id="address">
+            <p>Merchant's Quay</p>
+            <p>Cork city</p>
+            <p>Co. Cork</p>
+        </div>
+
+        <!--Business opening hours-->
+        <table id="opening-hours">
+            <tr>
+                <th>Opening hours</th>
+            </tr>
+            <tr>
+                <td>Mon - Fri:</td>
+                <td>1PM until late</td>
+            </tr>
+            <tr>
+                <td>Sat - Sun:</td>
+                <td>10AM until late</td>
+            </tr>
+        </table>
+
+        <div id="branding">
+            <p id="logo-bottom">Night Owlzzz™</p>
+            <!--Icons for social networks-->
+            <ul id="social-networks">
+                <li>
+                    <a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Visit our Facebook page (opens in a new tabs)"><i class="fa-brands fa-facebook"></i></a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Visit our Instagram page (opens in a new tabs)"><i class="fa-brands fa-instagram"></i></a>
+                </li>
+                <li>
+                    <a href="https://www.youtube.com/" target="_blank" rel="noopener" aria-label="Visit our YouTube page (opens in a new tabs)"><i class="fa-brands fa-youtube-square"></i></a>
+                </li>
+                <li>
+                    <a href="https://www.twitter.com/" target="_blank" rel="noopener" aria-label="Visit our Twitter page (opens in a new tabs)"><i class="fa-brands fa-twitter-square"></i></a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+    
+    <!--Font Awesome kit upload-->
+    <script src="https://kit.fontawesome.com/86eb4c1ebb.js" crossorigin="anonymous"></script>
+</body>
+</html>
