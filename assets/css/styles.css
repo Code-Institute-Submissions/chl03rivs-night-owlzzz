@@ -25,7 +25,7 @@ h3 {
 p {
     text-align: justify;
     line-height: 2;
-    padding: 1rem 3rem;
+    padding: 1rem 2rem;
 }
 li {
     /*Styling to ensure there is enough space between list marker and text when enabled*/
@@ -178,16 +178,20 @@ hr {
 /*Styles for Index.html page*/
     /*Styles hero image*/
     #hero {
-        background-color: #1a1d3f;
         width: 100%;
     }   
     #hero img {
-        height: 100%;
         width: 100%;
          /*Creates crescent moon shaped border below the image*/
-         background-color: #242748;
          border-bottom: 3rem solid #c79306;
          border-radius: 0 0 60% 60%;
+    }
+    /*A blurred block overlapping with the top of the hero image so it fades into the background, thanks to this W3S guide: https://www.w3schools.com/cssref/css3_pr_box-shadow.php */
+    .blur-block {
+        width: 100%;
+        position: absolute;
+        top: 1rem;
+        box-shadow: 0px -15px 15px 20px #1a1d3f;
     }
     /*Styling the tagline*/
     #hero-right, #hero-left {
@@ -208,7 +212,6 @@ hr {
     #intro {
         position: relative;
         font-size: 150%;
-        margin: 1rem 2rem;
         line-height: 1.5;
         padding: 2rem 0;
     }
@@ -262,9 +265,6 @@ hr {
     }
     #come-visit p, #come-visit h2 {
         padding-bottom: 1rem;
-        padding-right: 6vw;
-        width: 60%;
-        text-align: justify;
     }
         /*Bookings link/button in "come visit us" section*/
         #bookings-link {
@@ -299,10 +299,10 @@ hr {
     #booking-options {
         background-color: #c79306;
         padding: 1rem;
+        margin: 2rem 0 2rem;
         border-radius: 5%;
         display: flex;
         flex-wrap: wrap;
-        width: 100vw;
         flex: 1 0 auto;
         justify-content: space-evenly;
         flex-direction: row;
@@ -321,7 +321,6 @@ hr {
         margin: 1rem;
         padding: 1.5rem;
         min-height: 15rem;
-        width: 17rem;
         display: flex;
         flex-wrap: wrap;
         align-items: center;
@@ -397,6 +396,14 @@ footer {
             height: 7vh;
             margin: 4%;
         }
+    /*Bookings options*/
+    #booking-options {
+        flex-wrap: nowrap;
+    }
+    #option1, #option2, #option3 {
+        /*Makes each block take up an equal amount of space on bigger screens*/
+        flex-basis: 33%;
+    }
 }    
 
 /*Media query for larger screens (1224px and up)*/
