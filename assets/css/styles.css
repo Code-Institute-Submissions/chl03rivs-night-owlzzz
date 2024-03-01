@@ -37,7 +37,7 @@ li {
     .button-animated {
         background-color: #c79306;
         color: #1a1d3f;
-        border-radius: 20%;
+        border-radius: 10px;
     }
     .button-animated:hover {
         background-color: #6d087f
@@ -366,6 +366,8 @@ main li::marker {
         padding: 1rem;
         margin-bottom: 2rem;
         border-radius: 10px;
+        display: flex;
+        flex-direction: column;
     }
     #inquiry-form legend {
         text-transform: uppercase;
@@ -373,10 +375,11 @@ main li::marker {
     /*Styles the form's input boxes*/
     input, textarea {
         background-color: rgba(199,147,6,0.4);
-        border-block-width: 4px;
         border-radius: 10px;
-        border-block-color: #1a1d3f;
-        border-inline-color: #1a1d3f;
+        /*Properties to style the line of input boxes*/
+        border-block-width: 4px;
+        border-block-color: #1a1d3f; /*Styles the top and bottom border line*/
+        border-inline-color: #1a1d3f; /*Styles the left and right border line*/
     }
     .inquiry {
         line-height: 2;
@@ -391,6 +394,14 @@ main li::marker {
     #notes {
         width: 100%;
         min-height: 4rem;
+    }
+    /*Styles form submit button*/
+    #send-form {
+        padding: 5px;
+        margin-top: 1rem;
+        /*Makes button smaller and displayed on the far right of the form block*/
+        width: 20%;
+        align-self: flex-end;
     }
 
 /*Footer*/
