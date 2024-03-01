@@ -104,9 +104,9 @@
         </div>
 
         <form method="post" id="inquiry-form">
-            <fieldset>
+            <fieldset class="inquiry">
                 <legend>Booking inquiry</legend>
-                <fieldset>
+                <fieldset class="inquiry" id="group-section">
                     <legend>About your group</legend>
                     <label for="members">Party members:</label>
                     <input type="number" id="members" class="members" required>
@@ -143,7 +143,7 @@
                     <input type="time" id="time" name="time" required>
                     <br>
                 </fieldset>
-                <fieldset>
+                <fieldset class="inquiry" id="you-section">
                     <legend>About you</legend>
                     <label for="f-name">First name:</label>
                     <input type="text" id="f-name" name="f-name" required>
@@ -158,7 +158,7 @@
                     <input type="number" id="phone-number" name="phone-number">
                     <br>
                 </fieldset>
-                <fieldset>
+                <fieldset class="inquiry" id="notes-section">
                     <legend>Additional information</legend>
                     <label for="notes">You can type out any additional information, questions or special requests you might have below:</label>
                     <br>
@@ -167,8 +167,8 @@
             </fieldset>
         </form>
         
-        <!--Embedded Google Map-->
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2461.859429406296!2d-8.47064992348061!3d51.9000293719052!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4844900e54e6370d%3A0xe7f166aab1e1dbf!2sMerchant&#39;s%20Quay%2C%20Centre%2C%20Cork!5e0!3m2!1sen!2sie!4v1708970649845!5m2!1sen!2sie" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" aria-label="map of Cork city showing the business's location on Merchant's quay"></iframe>
+        <!--Embedded Google Map with a yellow border on top to better fit in our aesthetics-->
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2461.859429406296!2d-8.47064992348061!3d51.9000293719052!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4844900e54e6370d%3A0xe7f166aab1e1dbf!2sMerchant&#39;s%20Quay%2C%20Centre%2C%20Cork!5e0!3m2!1sen!2sie!4v1708970649845!5m2!1sen!2sie" width="100%" height="450" style="border-top:2rem solid #c79306;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" aria-label="map of Cork city showing the business's location on Merchant's quay"></iframe>
     </main>
 
     <footer>

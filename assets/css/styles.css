@@ -359,6 +359,32 @@ main li::marker {
         margin-bottom: 2rem;
         border-radius: 10px;
     }
+    #inquiry-form legend {
+        text-transform: uppercase;
+    }
+    /*Styles the form's input boxes*/
+    input, textarea {
+        background-color: rgba(199,147,6,0.4);
+        border-block-width: 4px;
+        border-radius: 10px;
+        border-block-color: #1a1d3f;
+        border-inline-color: #1a1d3f;
+    }
+    .inquiry {
+        line-height: 2;
+        border-block-color: #1a1d3f;
+        border-inline-color: #1a1d3f;
+        padding: 1rem;
+        border-radius: 10px;
+    }
+    #group-section, #you-section, #notes-section {
+        background-color: rgba(204, 217, 175, 0.8);
+    }
+    #notes {
+        width: 100%;
+        min-height: 4rem;
+    }
+
 /*Footer*/
 footer {
     display: flex;
