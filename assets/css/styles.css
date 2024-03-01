@@ -12,13 +12,14 @@
 }
 body {
     min-height: 100vh;
+    width: 100%;
     display: flex;
     flex-direction: column;
     /*Generic styles*/
     background-color: #1a1d3f;
     color: #c79306;
 }
-h3 {
+h2, h3 {
     text-align: center;
     text-transform: uppercase;
 }
@@ -112,6 +113,7 @@ header a {
     /*Logo*/
     .logo {
         order: 2;
+        text-align: center;
         /*Flex properties to stack image and text on small screens*/
         display: flex;
         flex-wrap: nowrap;
@@ -129,7 +131,8 @@ header a {
     .logo-text {
         color: #c79306;
         text-decoration: none;
-        font-size: calc(17px + 3vw);
+        /*Keeps font size large enough on all devices based on viewport width*/
+        font-size: calc(13px + 3vw);
     }
     /*Nav bar*/
     nav {
@@ -155,7 +158,7 @@ header a {
         }
         /*Reduces space between marker and active link*/
         .nav-bar li {
-            padding: 0 2.5rem 0 0;
+            padding: 0 4rem 0 0;
         }
 
 /*Main content*/
@@ -175,25 +178,33 @@ hr {
     border-block-color: #c79306;
     margin: 2rem 0;
 }
+/*Styles list items markers in main content*/
+main li::marker {
+    /*Adds moon icon in place of the bullet point following the documentation of Font Awesome here: https://origin.fontawesome.com/docs/web/add-icons/pseudo-elements#font-families-and-styles-cheat-sheet */
+    font: var(--fa-font-regular);
+    content: "\f186";
+}
+
+/*Styles hero images*/
+#hero {
+    width: 100%;
+}   
+#hero img {
+    width: 100%;
+     /*Creates crescent moon shaped border below the image*/
+     border-bottom: 3rem solid #c79306;
+     border-radius: 0 0 60% 60%;
+}
+/*A blurred block overlapping with the top of the hero image so it fades into the background, thanks to this W3S guide: https://www.w3schools.com/cssref/css3_pr_box-shadow.php */
+.blur-block {
+    width: 100%;
+    position: absolute;
+    top: 1rem;
+    box-shadow: 0px -15px 15px 20px #1a1d3f;
+}
+
 /*Styles for Index.html page*/
-    /*Styles hero image*/
-    #hero {
-        width: 100%;
-    }   
-    #hero img {
-        width: 100%;
-         /*Creates crescent moon shaped border below the image*/
-         border-bottom: 3rem solid #c79306;
-         border-radius: 0 0 60% 60%;
-    }
-    /*A blurred block overlapping with the top of the hero image so it fades into the background, thanks to this W3S guide: https://www.w3schools.com/cssref/css3_pr_box-shadow.php */
-    .blur-block {
-        width: 100%;
-        position: absolute;
-        top: 1rem;
-        box-shadow: 0px -15px 15px 20px #1a1d3f;
-    }
-    /*Styling the tagline*/
+    /*Styling the tagline on hero image*/
     #hero-right, #hero-left {
         position: absolute;
         background: rgba(36, 39, 72, 0.9);
@@ -278,13 +289,14 @@ hr {
             height: 7vh;
             margin: 4%;
         }
+
 /*Styles for Bookings.html page*/
     #hero h2 {
         position: absolute;
         background: rgba(36, 39, 72, 0.9);
         padding: 2%;
         width: 30vw;
-        border-radius: 16%;
+        border-radius: 20px;
         font-size: 5vw;
         line-height: 1;
     }
@@ -293,14 +305,14 @@ hr {
         color: #1a1d3f;
         background-color: #e190dd;
         padding: 0.5rem;
-        border-radius: 15%;
+        border-radius: 20px;
     }
     /*Booking options*/
     #booking-options {
         background-color: #c79306;
         padding: 1rem;
         margin: 2rem 0 2rem;
-        border-radius: 5%;
+        border-radius: 20px;
         display: flex;
         flex-wrap: wrap;
         flex: 1 0 auto;
@@ -316,10 +328,10 @@ hr {
     }
     #option1, #option2, #option3 {
         background-color: #1a1d3f;
-        border-radius: 5%;
         font-size: 105%;
         margin: 1rem;
         padding: 1.5rem;
+        border-radius: 20px;
         min-height: 15rem;
         display: flex;
         flex-wrap: wrap;
@@ -327,12 +339,16 @@ hr {
         justify-content: center;
         align-content: center;
     }
-    /*Styles list items markers*/
-    #booking-options li::marker, #booking-details li::marker {
-        /*Adds moon icon in place of the bullet point following the documentation of Font Awesome here: https://origin.fontawesome.com/docs/web/add-icons/pseudo-elements#font-families-and-styles-cheat-sheet */
-        font: var(--fa-font-regular);
-        content: "\f186";
+    /*Details about bookings*/
+    #booking-details {
+        border: 1px solid #c79306;
+        border-radius: 20px;
+        padding: 2rem;
     }
+    #booking-details h2 {
+        padding-bottom: 1rem;
+    }
+
 /*Footer*/
 footer {
     display: flex;
@@ -408,9 +424,9 @@ footer {
 
 /*Media query for larger screens (1224px and up)*/
 @media screen and (min-device-width:1224px) {
-    /*Adjusts header's font size*/
+    /*Keeps nav links around logo in header*/
     header {
-        font-size: xx-large;
+        flex-wrap: nowrap;
     }
     /*Removes toggle button and adds expanded nav*/
     #nav-icon, #nav-toggle {
@@ -425,11 +441,11 @@ footer {
         flex-direction: row;
         position: relative;
     }
-    /*Arranges nav links equally around logo in header*/
+    /*Adjusts navigation's font size*/
     .nav-bar {
-        justify-content: space-evenly;
-        width: fit-content;
+        font-size: 170%;
     }
+    /*Ensures navigation appears in the right order around the logo*/
     .left-nav {
         order: 1;
     }
