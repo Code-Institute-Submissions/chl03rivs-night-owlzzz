@@ -218,7 +218,7 @@ main li::marker {
     align-items: center;
 }
     /*Creates different coloured cards*/
-    #services-games, #services-bar, #services-books {
+    #services-games, #services-bar, #services-books, #cold-drinks, #snacks, #sandwiches {
         background-color: #c79306;
         color: #1a1d3f;
         flex-direction: column;
@@ -227,7 +227,7 @@ main li::marker {
         min-height: 15rem;
         width: 17rem;
     }
-    #services-food, #services-wifi {
+    #services-food, #services-wifi, #hot-drinks, #baked {
         background-color: #1a1d3f;
         border-bottom: 21px solid #c79306;
         border-top: 1px solid #c79306;
@@ -237,6 +237,14 @@ main li::marker {
         border-radius: 0 0 60% 60%;
         min-height: 15rem;
         width: 17rem;
+    }
+    .menu-display {
+        display: flex;
+        width: 30rem !important;
+        align-content: center;
+    }
+    .prices {
+        
     }
 
 /*Styles for Index.html page*/
