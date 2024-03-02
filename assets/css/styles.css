@@ -219,7 +219,7 @@ main li::marker {
     align-items: center;
 }
     /*Creates different coloured cards*/
-    #services-games, #services-bar, #services-books, #cold-drinks, #baked {
+    .yellow-cards {
         background-color: #c79306;
         color: #1a1d3f;
         flex-direction: column;
@@ -228,7 +228,7 @@ main li::marker {
         min-height: 15rem;
         width: 17rem;
     }
-    #services-food, #services-wifi, #hot-drinks, #snacks, #sandwiches {
+    .blue-cards {
         background-color: #1a1d3f;
         border-bottom: 21px solid #c79306;
         border-top: 1px solid #c79306;
