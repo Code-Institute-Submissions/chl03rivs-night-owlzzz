@@ -218,7 +218,7 @@ main li::marker {
     align-items: center;
 }
     /*Creates different coloured cards*/
-    #services-games, #services-bar, #services-books, #cold-drinks, #snacks, #sandwiches {
+    #services-games, #services-bar, #services-books, #cold-drinks, #baked {
         background-color: #c79306;
         color: #1a1d3f;
         flex-direction: column;
@@ -227,7 +227,7 @@ main li::marker {
         min-height: 15rem;
         width: 17rem;
     }
-    #services-food, #services-wifi, #hot-drinks, #baked {
+    #services-food, #services-wifi, #hot-drinks, #snacks, #sandwiches {
         background-color: #1a1d3f;
         border-bottom: 21px solid #c79306;
         border-top: 1px solid #c79306;
@@ -238,13 +238,23 @@ main li::marker {
         min-height: 15rem;
         width: 17rem;
     }
+    /*Styles specific to the food and drinks menu cards*/
     .menu-display {
-        display: flex;
+        align-content: space-evenly;
+        /*Overrides width and height properties assigned to all cards*/
         width: 30rem !important;
-        align-content: center;
+        height: 30rem !important;
     }
     .prices {
-        
+        line-height: 1rem;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .prices {
+
+    }
+    .prices td, .prices th {
+        padding: 10px;
     }
 
 /*Styles for Index.html page*/
@@ -400,7 +410,7 @@ main li::marker {
         padding: 5px;
         margin-top: 1rem;
         /*Makes button smaller and displayed on the far right of the form block*/
-        width: 20%;
+        width: 40%;
         align-self: flex-end;
     }
 
