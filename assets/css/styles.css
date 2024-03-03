@@ -22,6 +22,7 @@ body {
 h2, h3 {
     text-align: center;
     text-transform: uppercase;
+    padding: 1rem;
 }
 p {
     text-align: justify;
@@ -63,7 +64,7 @@ header {
     /*Creates crescent moon shaped border below the header*/
     background-color: #1a1d3f;
     border-bottom: 3rem solid #c79306;
-    border-radius: 0 0 60% 60%;
+    border-radius: 0 0 50% 50%;
 }
 header a {
     text-decoration: none;
@@ -193,7 +194,7 @@ main li::marker {
     width: 100%;
      /*Creates crescent moon shaped border below the image*/
      border-bottom: 3rem solid #c79306;
-     border-radius: 0 0 60% 60%;
+     border-radius: 0 0 50% 50%;
 }
 /*A blurred block overlapping with the top of the hero image so it fades into the background, thanks to this W3S guide: https://www.w3schools.com/cssref/css3_pr_box-shadow.php */
 .blur-block {
@@ -221,10 +222,13 @@ main li::marker {
     /*Creates different coloured cards*/
     .yellow-cards {
         background-color: #c79306;
+        /*Adds borders with the same color as the cards so they are the same height as the blue cards*/
+        border-bottom: 21px solid #c79306;
+        border-top: 1px solid #c79306;
         color: #1a1d3f;
         flex-direction: column;
         line-height: 20px;
-        border-radius: 0 0 60% 60%;
+        border-radius: 0 0 50% 50%;
         min-height: 15rem;
         width: 17rem;
     }
@@ -235,7 +239,7 @@ main li::marker {
         color: #c79306;
         flex-direction: column;
         line-height: 20px;
-        border-radius: 0 0 60% 60%;
+        border-radius: 0 0 50% 50%;
         min-height: 15rem;
         width: 17rem;
     }
@@ -243,20 +247,14 @@ main li::marker {
     .menu-display {
         align-content: space-evenly;
         /*Overrides width and height properties assigned to all cards*/
-        width: 30rem !important;
-        height: 30rem !important;
-    }
-    .prices {
-        line-height: 1rem;
-        display: flex;
-        flex-wrap: wrap;
-    }
-    .prices {
-
+        min-width: 100% !important;
+        height: 100vh !important;
+        /*Removes the crescent moon bottom border on smaller devices so the content does not bleed out*/
+        border-radius: 0 !important;
     }
     .prices td, .prices th {
         padding: 10px;
-    }
+    }    
 
 /*Styles for Index.html page*/
     /*Styling the tagline on hero image*/
@@ -485,6 +483,11 @@ footer {
     #option1, #option2, #option3 {
         /*Makes each block take up an equal amount of space on bigger screens*/
         flex-basis: 33%;
+    }
+    /*Menu page*/
+    /*Re-enables the crescent moon bottom borders on larger screens*/
+    .menu-display {
+        border-radius: 0 0 50% 50% !important;
     }
 }    
 
