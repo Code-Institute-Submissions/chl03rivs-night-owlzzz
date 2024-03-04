@@ -385,10 +385,15 @@ main li::marker {
     input, textarea {
         background-color: rgba(199,147,6,0.4);
         border-radius: 10px;
+        padding-inline: 1rem;
         /*Properties to style the line of input boxes*/
         border-block-width: 4px;
         border-block-color: #1a1d3f; /*Styles the top and bottom border line*/
         border-inline-color: #1a1d3f; /*Styles the left and right border line*/
+    }
+    /*Adds small indent on radio button labels*/
+    .indent {
+        padding-left: 2rem;
     }
     .inquiry {
         line-height: 2;

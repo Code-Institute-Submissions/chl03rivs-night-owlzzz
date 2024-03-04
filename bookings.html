@@ -102,8 +102,8 @@
                 <li>The balance of your fees must be paid three days prior to your booking date at the latest.</li>
             </ul>
         </div>
-
-        <form method="post" id="inquiry-form">
+        <!--Inquiry form that will lead to a confirmation page-->
+        <form method="get" action="" target="_blank" id="inquiry-form">
             <fieldset class="inquiry">
                 <legend>Booking inquiry</legend>
                 <fieldset class="inquiry" id="group-section">
@@ -112,25 +112,29 @@
                     <input type="number" id="members" class="members" required>
                     <br>
                     <label for="booking-type">Booking type:</label>
-                        <label for="reservation">Area reservation</label>
+                    <br>
+                        <label for="reservation" class="indent">Area reservation</label>
                         <input type="radio" name="booking-type" id="reservation" value="Reservation" required>
-                        <label for="private">Private room</label>
+                    <br>
+                        <label for="private" class="indent">Private room</label>
                         <input type="radio" name="booking-type" id="private" value="Private" required>
                     <br>
                     <label for="recurring">Would this be a recurring booking?</label>
-                        <label for="yes">Yes</label>
+                    <br>
+                        <label for="yes" class="indent">Yes</label>
                         <input type="radio" name="recurring" id="yes" value="Yes" required>
-                        <label for="no">No</label>
+                        <br>
+                        <label for="no" class="indent">No</label>
                         <input type="radio" name="recurring" id="no" value="No" required>
                     <br>
-                    <label for="frequency">If yes, at what frequency?</label>
-                    <input list="frequency" name="frequency" id="frequency">
+                    <label for="frequency-choice">If yes, at what frequency?</label>
+                    <input list="frequency" name="frequency-choice" id="frequency-choice">
                         <datalist id="frequency">
-                            <option value="weekly">Weekly</option>
-                            <option value="bi-weekly">Bi-weekly</option>
-                            <option value="monthly">Monthly</option>
-                            <option value="bi-monthly">Bi-monthly</option>
-                            <option value="quarterly">Quarterly</option>
+                            <option value="weekly">
+                            <option value="bi-weekly">
+                            <option value="monthly">
+                            <option value="bi-monthly">
+                            <option value="quarterly">
                         </datalist>
                     <br>
                     <label for="length">How long will you be staying?</label>
@@ -155,7 +159,7 @@
                     <input type="email" id="email" name="email" required>
                     <br>
                     <label for="phone-number">Phone number:</label>
-                    <input type="number" id="phone-number" name="phone-number">
+                    <input type="text" id="phone-number" name="phone-number">
                     <br>
                 </fieldset>
                 <fieldset class="inquiry" id="notes-section">
