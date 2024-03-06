@@ -8,7 +8,12 @@
     box-sizing: border-box;
     font-family: "Kode Mono", monospace;
     font-weight: 900;
+    letter-spacing: 2.5px;
     list-style-type: none;
+    /*Borders*/
+    border-block-width: 4px;
+    border-block-color: #c79306 ; /*Styles the top and bottom border line*/
+    border-inline-color: #c79306; /*Styles the left and right border line*/
 }
 body {
     min-height: 100vh;
@@ -22,160 +27,152 @@ body {
 h2, h3 {
     text-align: center;
     text-transform: uppercase;
-    padding: 1rem;
+    padding: 0 1rem 2rem;
 }
-p {
+.regular-text {
+    font-size: 22px;
     text-align: justify;
     line-height: 2;
+    width: 70%;
+    align-self: center;
     padding: 1rem 2rem;
+    margin: 2rem;
 }
+/*Links*/
 li {
     /*Styling to ensure there is enough space between list marker and text when enabled*/
     position: relative;
     padding-left: 10px;
 }
-    /*Button animation based on the W3Schools documentation here: https://www.w3schools.com/css/css3_buttons.asp#:~:text=Try%20it%20Yourself%20%C2%BB-,Animated%20Buttons,-Example */
-    .button-animated {
-        background-color: #c79306;
-        color: #1a1d3f;
-        border-radius: 10px;
-    }
-    .button-animated:hover {
-        background-color: #6d087f
-    }
-    .button-animated:active {
-        background-color: #a80cc4;
-        box-shadow: 0 5px #e190dd;
-        transform: translateY(4px);
-    }
- /*Creates crescent moon shaped border below the image*/
- .moon-border {
+/*Button animation based on the W3Schools documentation here: https://www.w3schools.com/css/css3_buttons.asp#:~:text=Try%20it%20Yourself%20%C2%BB-,Animated%20Buttons,-Example */
+.button-animated {
+    background-color: #c79306;
+    color: #1a1d3f;
+    border-block: none;
+    border-radius: 10px;
+}
+.button-animated:hover {
+    background-color: #aaaa5b
+}
+.button-animated:active {
+    background-color: #cbcb8d;
+    box-shadow: 0 5px #aaaa5b;
+    transform: translateY(4px);
+}
+/*Creates crescent moon shaped border below the element*/
+.moon-border {
     border-bottom: 3rem solid #c79306;
     border-radius: 0 0 50% 50%;
 }
 /*Header*/
 header {
-    color: #c79306;
-    width: 100%;
     z-index: 99;
+    background-color: #1a1d3f;
     position: absolute;
     padding: 0 1rem 3rem;
-    font-size: large;
-    letter-spacing: 3px;
+    font-size: larger;
     display: flex;
-    justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    /*Creates crescent moon shaped border below the header*/
-    background-color: #1a1d3f;
-    border-bottom: 3rem solid #c79306;
-    border-radius: 0 0 50% 50%;
 }
-header a {
+header a, .clean-link {
     text-decoration: none;
     color: #c79306;
 }
-    /*Navigation*/
-    /*Makes the toggle button (checkbox) invisible*/
-    #nav-toggle {
-        display: none;
-    }
-    /*Adds background to the nav bar when toggled*/   
-    #nav-toggle:checked~.nav-bar {
-        display: grid;
-        justify-content: start;
-        width: 100%;
-        height: 100%;
-        top: 0;
-        z-index: 99;
-    }
-    #nav-toggle:checked~#nav-icon {
-        background: rgba(36, 39, 72, 0.9);
-        width: 100%;
-        height: 100vh;
-    }
-    /*Fixes the display of the nav blocks in the expanded menu*/
-    #nav-toggle:checked~.left-nav {
-        position: fixed;
-        order: 1;
-        top: 6rem;
-        align-content: start;
-    }
-    #nav-toggle:checked~.right-nav {
-        order: 2;
-        align-content: start;
-        position: fixed;
-        top: 11rem;
-    }
-    /*Styles hamburger icon*/
-    #nav-icon {
-        position: absolute;
-        font-size: 2rem;
-        padding: 0 2rem;
-        z-index: 99;
-        left: 0;
-        top: 5%;
-    }
-    /*Logo*/
-    .logo {
-        order: 2;
-        text-align: center;
-        /*Flex properties to stack image and text on small screens*/
-        display: flex;
-        flex-wrap: nowrap;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-    }
-    .logo-img {
-        height: auto;
-        width: 50%;
-        max-width: 200px;
-        padding-top: 1rem;
-        position: relative;
-    }
-    .logo-text {
-        color: #c79306;
-        text-decoration: none;
-        /*Keeps font size large enough on all devices based on viewport width*/
-        font-size: calc(13px + 3vw);
-    }
-    /*Nav bar*/
-    nav {
-        /*Hides expanded navigation on mobile to prioritise the hamburger menu instead*/
-        display: none;
-    }
-    /*Makes link text grow bigger on hover*/
-    nav li:hover {
-        transform: scale(1.1);
-    }
-    .nav-bar ul {
-        text-transform: uppercase;
-    }
-        /*Targets the active class for the current page's link*/
-        .active {
-            color: #a80cc4;
-            text-decoration: underline;
-        }
-        /*Adds moon icon next to active link following the documentation of Font Awesome here: https://origin.fontawesome.com/docs/web/add-icons/pseudo-elements#font-families-and-styles-cheat-sheet */
-        .active::marker {
-            font: var(--fa-font-regular);
-            content: "\f186";
-        }
-        /*Reduces space between marker and active link*/
-        .nav-bar li {
-            padding: 0 20px 0 0;
-            margin-left: 20px;
-        }
-
+/*Navigation*/
+/*Makes the toggle button (checkbox) invisible*/
+#nav-toggle {
+    display: none;
+}
+/*Adds background to the nav bar when toggled*/   
+#nav-toggle:checked~.nav-bar {
+    display: grid;
+    justify-content: start;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    z-index: 99;
+}
+#nav-toggle:checked~#nav-icon {
+    background: rgba(36, 39, 72, 0.9);
+    width: 100%;
+    height: 100vh;
+}
+/*Fxes the display of the nav blocks in the expanded menu*/
+#nav-toggle:checked~.left-nav {
+    position: fixed;
+    order: 1;
+    top: 6rem;
+    align-content: start;
+}
+#nav-toggle:checked~.right-nav {
+    order: 2;
+    align-content: start;
+    position: fixed;
+    top: 11rem;
+}
+/*Styles hamburger icon*/
+#nav-icon {
+    position: absolute;
+    font-size: 2rem;
+    padding: 0 2rem;
+    z-index: 99;
+    left: 0;
+    top: 5%;
+}
+/*Logo*/
+.logo {
+    order: 2;
+    text-align: center;
+    /*Flex properties to stack image and text on small screens*/
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.logo-img {
+    height: auto;
+    width: 50%;
+    max-width: 200px;
+    padding-top: 1rem;
+    position: relative;
+}
+.logo-text {
+    /*Keeps font size large enough on all devices based on viewport width*/
+    font-size: calc(13px + 3vw);
+}
+/*Nav bar*/
+nav {
+    /*Hides expanded navigation on mobile to prioritise the hamburger menu instead*/
+    display: none;
+}
+/*Makes link text grow bigger on hover*/
+nav li:hover {
+    transform: scale(1.1);
+}
+.nav-bar ul {
+    text-transform: uppercase;
+}
+.active {
+    color: #a80cc4;
+    text-decoration: underline;
+}
+/*Adds moon icon next to active link following the documentation of Font Awesome here: https://origin.fontawesome.com/docs/web/add-icons/pseudo-elements#font-families-and-styles-cheat-sheet */
+.active::marker {
+    font: var(--fa-font-regular);
+    content: "\f186";
+}
+/*Reduces space between marker and active link*/
+.nav-bar li {
+    padding: 0 20px 0 0;
+    margin-left: 20px;
+}
 /*Main content*/
 main {
-    text-align: justify;
-    /* Enable flex properties for child elements */
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    /* Make main element take surplus space (instead of shrink) to push footer down */
     margin-top: calc(50px + 20vh); /*Calculates top margin based on viewport height*/
     width: 100%;
 }
@@ -220,7 +217,6 @@ main li::marker {
     /*Creates different coloured cards*/
     .yellow-cards {
         background-color: #c79306;
-        /*Adds borders with the same color as the cards so they are the same height as the blue cards*/
         border-bottom: 21px solid #c79306;
         border-top: 1px solid #c79306;
         color: #1a1d3f;
@@ -270,13 +266,7 @@ main li::marker {
     #hero-right {
         right: 2vw;
     }
-    /*Brief business introduction*/
-    #intro {
-        position: relative;
-        font-size: 150%;
-        line-height: 1.5;
-        padding: 2rem 0;
-    }
+
     /*Come visit us section*/
     #come-visit {
         display: flex;
@@ -336,35 +326,33 @@ main li::marker {
     #booking-options hr {
         margin: 0.5rem; /*Reduces the space around the hr line*/
     }
-    #booking-options p {
+    .cards-text {
+        font-size: 17px;
         line-height: 1;
-        padding: 0 0 1rem; /*Override general padding settings*/
+        padding: 0 0 1rem;
     }
-    #option1, #option2, #option3 {
-        background-color: #1a1d3f;
-        font-size: 105%;
-        margin: 1rem;
-        padding: 1.5rem;
-        border-radius: 20px;
-        min-height: 15rem;
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: center;
-        align-content: center;
-    }
-    /*Details about bookings*/
-    #booking-details {
-        border: 1px solid #c79306;
-        border-radius: 20px;
-        padding: 2rem;
-        margin-bottom: 2rem;
-        width: 70%;
-        align-self: center;
-    }
-    #booking-details h2 {
-        padding-bottom: 1rem;
-    }
+/*Containers*/
+.rounded-cards {
+    background-color: #1a1d3f;
+    font-size: 105%;
+    margin: 1rem;
+    padding: 1.5rem;
+    border-radius: 20px;
+    min-height: 15rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+}
+.golden-box {
+    border: 1px solid #c79306;
+    border-radius: 20px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    width: 70%;
+    align-self: center;
+}
     /*Booking inquiry form*/
     #inquiry-form {
         background-color: #c79306;
