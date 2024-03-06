@@ -48,6 +48,11 @@ li {
         box-shadow: 0 5px #e190dd;
         transform: translateY(4px);
     }
+ /*Creates crescent moon shaped border below the image*/
+ .moon-border {
+    border-bottom: 3rem solid #c79306;
+    border-radius: 0 0 50% 50%;
+}
 /*Header*/
 header {
     color: #c79306;
@@ -186,16 +191,6 @@ main li::marker {
     font: var(--fa-font-regular);
     content: "\f186";
 }
-/*Styles hero images*/
-#hero {
-    width: 100%;
-}   
-#hero img {
-    width: 100%;
-     /*Creates crescent moon shaped border below the image*/
-     border-bottom: 3rem solid #c79306;
-     border-radius: 0 0 50% 50%;
-}
 /*A blurred block overlapping with the top of the hero image so it fades into the background, thanks to this W3S guide: https://www.w3schools.com/cssref/css3_pr_box-shadow.php */
 .blur-block {
     width: 100%;
@@ -218,6 +213,9 @@ main li::marker {
     flex-wrap: wrap;
     flex-direction: row;
     align-items: center;
+}
+.hero {
+    width: 100%;
 }
     /*Creates different coloured cards*/
     .yellow-cards {
@@ -307,7 +305,7 @@ main li::marker {
         }
 
 /*Styles for Bookings.html page*/
-    #hero h2 {
+    .hero-text {
         position: absolute;
         background: rgba(36, 39, 72, 0.9);
         padding: 2%;
