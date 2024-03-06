@@ -21,47 +21,47 @@
 
 <body>
     <header class="moon-border">
-         <!--Logo-->
-         <div class="logo">
-            <a class="logo clean-link" href="./index.html">
-                <img class="logo-img" src="./assets/images/transparent-logo.png" alt="Night Owlzzz logo, an owl holding a cup of coffee in its claws">
-                <h1 class="logo-text">Night Owlzzz</h1>
-            </a>
-        </div>
-        <!--Navigation-->
-            <!--Navigation toggle-->
-            <input type="checkbox" name="nav-toggle" id="nav-toggle">
-            <label for="nav-toggle" id="nav-icon">
-                <!--Font Awesome Hamburger menu icon-->
-                <i class="fa-solid fa-bars"></i>
-            </label>
+        <!--Logo-->
+        <div class="logo">
+           <a class="logo clean-link" href="./index.html">
+               <img class="logo-img" src="./assets/images/transparent-logo.png" alt="Night Owlzzz logo, an owl holding a cup of coffee in its claws">
+               <h1 class="flex-text">Night Owlzzz</h1>
+           </a>
+       </div>
+       <!--Navigation-->
+           <!--Navigation toggle-->
+           <input type="checkbox" name="nav-toggle" id="nav-toggle">
+           <label for="nav-toggle" id="nav-icon">
+               <!--Font Awesome Hamburger menu icon-->
+               <i class="fa-solid fa-bars"></i>
+           </label>
 
-            <!--Nav bar-->
-            <nav class="nav-bar left-nav">
-                <ul>
-                    <li><a href="./index.html">Home</a></li>
-                    <li><a href="./menu.html">Menu</a></li>
-                    <li><a href="./games.html">Games</a></li>
-                </ul>
-            </nav>
-            <nav class="nav-bar right-nav">
-                <ul>
-                    <li><a href="./faq.html">FAQ</a></li>
-                    <li class="active"><a href="./bookings.html">Bookings</a></li>
-                    <li><a href="./about.html">About</a></li>
-                </ul>
-            </nav>
-    </header>
+           <!--Nav bar-->
+           <nav class="nav-bar left-nav">
+               <ul>
+                   <li><a href="./index.html" class="clean-link">Home</a></li>
+                   <li><a href="./menu.html" class="clean-link">Menu</a></li>
+                   <li><a href="./games.html" class="clean-link">Games</a></li>
+               </ul>
+           </nav>
+           <nav class="nav-bar right-nav">
+               <ul>
+                   <li><a href="./faq.html" class="clean-link">FAQ</a></li>
+                   <li class="active"><a href="./bookings.html" class="clean-link">Bookings</a></li>
+                   <li><a href="./about.html" class="clean-link">About</a></li>
+               </ul>
+           </nav>
+   </header>
 
     <main>
-        <div class="cards" id="hero">
+        <div class="hero">
             <!--Block with CSS to blur the top edge of the picture on small screens so that it blends in with the background-->
             <div class="blur-block"></div>
             <img src="./assets/images/cards-in-hands.webp" alt="The hands of a person holding the cards of a board game on a table with additional game pieces in the background" class="moon-border hero">
             <h2 class="hero-text">Bookings</h2>
         </div>
 
-        <p class="regular-text">Although we accept walk-ins, we cannot ensure that there will always be enough room for your group on any given day. You can easily reserve a table or room by contacting our team using the form below, or by phoning: <span id="phone">+353 833 221 100</span></p>
+        <p class="regular-text">Although we accept walk-ins, we cannot ensure that there will always be enough room for your group on any given day. You can easily reserve a table or room by contacting our team using the form below, or by phoning: <span class="color-pop">+353 833 221 100</span></p>
         <section id="booking-options">
             <div class="rounded-cards">
                 <h3>Option 1: Free (+ deposit)</h3>
@@ -170,7 +170,7 @@
                 </fieldset>
             </fieldset>
 
-            <button type="submit" class="button-animated" id="send-form">Submit <i class="fa-solid fa-paper-plane"></i></button>
+            <button class="button-animated" id="send-form">Submit <i class="fa-solid fa-paper-plane"></i></button>
         </form>
         
         <!--Embedded Google Map with a yellow border on top to better fit in our aesthetics-->

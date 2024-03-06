@@ -24,10 +24,16 @@ body {
     background-color: #1a1d3f;
     color: #c79306;
 }
+
+/*Text*/
 h2, h3 {
     text-align: center;
     text-transform: uppercase;
     padding: 0 1rem 2rem;
+}
+.flex-text {
+    /*Keeps font size large enough on all devices based on viewport width*/
+    font-size: calc(13px + 3vw);
 }
 .regular-text {
     font-size: 22px;
@@ -37,6 +43,9 @@ h2, h3 {
     align-self: center;
     padding: 1rem 2rem;
     margin: 2rem;
+}
+.indent {
+    padding-left: 2rem;
 }
 /*Links*/
 li {
@@ -67,15 +76,17 @@ li {
 /*Header*/
 header {
     z-index: 99;
+    width: 100vw;
     background-color: #1a1d3f;
     position: absolute;
     padding: 0 1rem 3rem;
     font-size: larger;
     display: flex;
+    justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
 }
-header a, .clean-link {
+.clean-link {
     text-decoration: none;
     color: #c79306;
 }
@@ -132,15 +143,9 @@ header a, .clean-link {
     flex-direction: column;
 }
 .logo-img {
-    height: auto;
     width: 50%;
     max-width: 200px;
     padding-top: 1rem;
-    position: relative;
-}
-.logo-text {
-    /*Keeps font size large enough on all devices based on viewport width*/
-    font-size: calc(13px + 3vw);
 }
 /*Nav bar*/
 nav {
@@ -188,6 +193,13 @@ main li::marker {
     font: var(--fa-font-regular);
     content: "\f186";
 }
+/*Hero image*/
+.hero {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
 /*A blurred block overlapping with the top of the hero image so it fades into the background, thanks to this W3S guide: https://www.w3schools.com/cssref/css3_pr_box-shadow.php */
 .blur-block {
     width: 100%;
@@ -195,7 +207,32 @@ main li::marker {
     top: 1rem;
     box-shadow: 0px -15px 15px 20px #1a1d3f;
 }
-/*Creats cards to display services and food & drinks menu*/
+/*Hero text*/
+#hero-right, #hero-left {
+    position: absolute;
+    background: rgba(36, 39, 72, 0.9);
+    padding: 2%;
+    width: 30vw;
+    border-radius: 16%;
+    line-height: 1;
+}
+#hero-left {
+    left: 2vw;
+}
+#hero-right {
+    right: 2vw;
+}
+.hero-text {
+    position: absolute;
+    background: rgba(36, 39, 72, 0.9);
+    padding: 2%;
+    width: 30vw;
+    border-radius: 20px;
+    font-size: 5vw;
+    line-height: 1;
+}
+
+/*Coloured cards*/
 #cards-title {
     text-transform: uppercase;
     padding: 1.5rem;
@@ -211,61 +248,43 @@ main li::marker {
     flex-direction: row;
     align-items: center;
 }
-.hero {
-    width: 100%;
+.yellow-cards, .blue-cards {
+    min-height: 15rem;
+    width: 17rem;
+    border-radius: 0 0 50% 50%;
+    border-bottom: 21px solid #c79306;
+    border-top: 1px solid #c79306;
+    flex-direction: column;
+    line-height: 20px;
 }
-    /*Creates different coloured cards*/
-    .yellow-cards {
-        background-color: #c79306;
-        border-bottom: 21px solid #c79306;
-        border-top: 1px solid #c79306;
-        color: #1a1d3f;
-        flex-direction: column;
-        line-height: 20px;
-        border-radius: 0 0 50% 50%;
-        min-height: 15rem;
-        width: 17rem;
-    }
-    .blue-cards {
-        background-color: #1a1d3f;
-        border-bottom: 21px solid #c79306;
-        border-top: 1px solid #c79306;
-        color: #c79306;
-        flex-direction: column;
-        line-height: 20px;
-        border-radius: 0 0 50% 50%;
-        min-height: 15rem;
-        width: 17rem;
-    }
-    /*Styles specific to the food and drinks menu cards*/
-    .menu-display {
-        align-content: space-evenly;
-        /*Overrides width and height properties assigned to all cards*/
-        min-width: 100% !important;
-        height: 100vh !important;
-        /*Removes the crescent moon bottom border on smaller devices so the content does not bleed out*/
-        border-radius: 0 !important;
-    }
-    .prices td, .prices th {
-        padding: 10px;
-    }    
+.yellow-cards {
+    background-color: #c79306;
+    color: #1a1d3f;
+}
+.blue-cards {
+    background-color: #1a1d3f;
+    color: #c79306;
+}
+/*Menu page*/
+.menu-display {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    /*Overrides width and height properties assigned to all cards*/
+    width: 100vw !important;
+    min-height: 100vh !important;
+    /*Removes the crescent moon bottom border on smaller devices so the content does not bleed out*/
+    border-radius: 0 !important;
+}
+td, th {
+    padding: 10px;
+}   
+.prices {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+} 
 
-/*Styles for Index.html page*/
-    /*Styling the tagline on hero image*/
-    #hero-right, #hero-left {
-        position: absolute;
-        background: rgba(36, 39, 72, 0.9);
-        padding: 2%;
-        width: 30vw;
-        border-radius: 16%;
-        line-height: 1;
-    }
-    #hero-left {
-        left: 2vw;
-    }
-    #hero-right {
-        right: 2vw;
-    }
 
     /*Come visit us section*/
     #come-visit {
@@ -295,16 +314,8 @@ main li::marker {
         }
 
 /*Styles for Bookings.html page*/
-    .hero-text {
-        position: absolute;
-        background: rgba(36, 39, 72, 0.9);
-        padding: 2%;
-        width: 30vw;
-        border-radius: 20px;
-        font-size: 5vw;
-        line-height: 1;
-    }
-    #phone {
+    
+    .color-pop {
         display: inline-block;
         color: #1a1d3f;
         background-color: #e190dd;
@@ -377,10 +388,7 @@ main li::marker {
         border-block-color: #1a1d3f; /*Styles the top and bottom border line*/
         border-inline-color: #1a1d3f; /*Styles the left and right border line*/
     }
-    /*Adds small indent on radio button labels*/
-    .indent {
-        padding-left: 2rem;
-    }
+    
     .inquiry {
         line-height: 2;
         border-block-color: #1a1d3f;

@@ -21,41 +21,41 @@
 
 <body>
     <header class="moon-border">
-         <!--Logo-->
-         <div class="logo">
-            <a class="logo" href="./index.html">
-                <img class="logo-img" src="./assets/images/transparent-logo.png" alt="Night Owlzzz logo, an owl holding a cup of coffee in its claws">
-                <h1 class="logo-text">Night Owlzzz</h1>
-            </a>
-        </div>
-        <!--Navigation-->
-            <!--Navigation toggle-->
-            <input type="checkbox" name="nav-toggle" id="nav-toggle">
-            <label for="nav-toggle" id="nav-icon">
-                <!--Font Awesome Hamburger menu icon-->
-                <i class="fa-solid fa-bars"></i>
-            </label>
+        <!--Logo-->
+        <div class="logo">
+           <a class="logo clean-link" href="./index.html">
+               <img class="logo-img" src="./assets/images/transparent-logo.png" alt="Night Owlzzz logo, an owl holding a cup of coffee in its claws">
+               <h1 class="flex-text">Night Owlzzz</h1>
+           </a>
+       </div>
+       <!--Navigation-->
+           <!--Navigation toggle-->
+           <input type="checkbox" name="nav-toggle" id="nav-toggle">
+           <label for="nav-toggle" id="nav-icon">
+               <!--Font Awesome Hamburger menu icon-->
+               <i class="fa-solid fa-bars"></i>
+           </label>
 
-            <!--Nav bar-->
-            <nav class="nav-bar left-nav">
-                <ul>
-                    <li><a href="./index.html">Home</a></li>
-                    <li class="active"><a href="./menu.html">Menu</a></li>
-                    <li><a href="./games.html">Games</a></li>
-                </ul>
-            </nav>
-            <nav class="nav-bar right-nav">
-                <ul>
-                    <li><a href="./faq.html">FAQ</a></li>
-                    <li><a href="./bookings.html">Bookings</a></li>
-                    <li><a href="./about.html">About</a></li>
-                </ul>
-            </nav>
-    </header>
+           <!--Nav bar-->
+           <nav class="nav-bar left-nav">
+               <ul>
+                   <li><a href="./index.html" class="clean-link">Home</a></li>
+                   <li class="active"><a href="./menu.html" class="clean-link">Menu</a></li>
+                   <li><a href="./games.html" class="clean-link">Games</a></li>
+               </ul>
+           </nav>
+           <nav class="nav-bar right-nav">
+               <ul>
+                   <li><a href="./faq.html" class="clean-link">FAQ</a></li>
+                   <li><a href="./bookings.html" class="clean-link">Bookings</a></li>
+                   <li><a href="./about.html" class="clean-link">About</a></li>
+               </ul>
+           </nav>
+   </header>
 
     <main>
         <!--Hero image-->
-        <div class="cards">
+        <div class="hero">
             <!--Block with CSS to blur the top edge of the picture on small screens so that it blends in with the background-->
             <div class="blur-block"></div>
             <img src="./assets/images/inside-cafe.webp" alt="A picture of the inside of a cafe with plenty of natural light coming in and potted plants everywhere" class="moon-border hero">
@@ -63,10 +63,10 @@
         </div>
         <!--Menu cards-->
         <!--Section title-->
-        <h2 id="cards-title">Have a look at our food and drinks menu</h2>
+        <h2 class="flex-text">Have a look at our food and drinks menu</h2>
 
         <section class="cards">
-            <div class="cards menu-display blue-cards" id="hot-drinks">
+            <div class="menu-display blue-cards">
                 <h3>Hot drinks <i class="fa-solid fa-mug-hot"></i></h3>
                 <table class="prices cards-text">
                     <tr>
@@ -106,7 +106,7 @@
                     </tr>
                 </table>
                 <!--Second part of menu-->
-                <table class="prices prices2 cards-text">
+                <table class="prices cards-text">
                     <tr>
                         <th>Teas</th>
                         <th>Regular</th>
@@ -144,7 +144,7 @@
                     </tr>
                 </table>
             </div>
-            <div class="cards menu-display yellow-cards">
+            <div class="menu-display yellow-cards">
                 <h3>Cold drinks <i class="fa-solid fa-martini-glass-empty"></i></h3>
                 <table class="prices cards-text">
                     <tr>
@@ -177,7 +177,7 @@
                     </tr>
                 </table>
                 <!--Second part of menu-->
-                <table class="prices prices2 cards-text">
+                <table class="prices cards-text">
                     <tr>
                         <th>Mocktails</th>
                         <th></th>
@@ -208,7 +208,7 @@
                     </tr>
                 </table>
             </div>
-            <div class="cards blue-cards menu-display">
+            <div class="menu-display blue-cards">
                 <h3>Snacks <i class="fa-solid fa-cookie-bite"></i></h3>
                 <table class="prices cards-text">
                     <tr>
@@ -237,7 +237,7 @@
                     </tr>
                 </table>
                 <!--Second part of menu-->
-                <table class="prices prices2">
+                <table class="prices cards-text">
                     <tr>
                         <td>Veg and hummus tray</td>
                         <td>€3.50</td>
@@ -264,7 +264,7 @@
                     </tr>
                 </table>
             </div>
-            <div class="cards yellow-cards menu-display">
+            <div class="menu-display yellow-cards">
                 <h3>Baked goods <i class="fa-solid fa-cheese"></i></h3>
                 <table class="prices cards-text">
                     <tr>
@@ -297,7 +297,7 @@
                     </tr>
                 </table>
                 <!--Second part of menu-->
-                <table class="prices prices2 cards-text">
+                <table class="prices cards-text">
                     <tr>
                         <th></th>
                         <th>(per slice)</th>
@@ -328,7 +328,7 @@
                     </tr>
                 </table>
             </div>
-            <div class="cards blue-cards menu-display">
+            <div class="blue-cards menu-display">
                 <h3>Sandwiches <i class="fa-solid fa-burger"></i></h3>
                 <table class="prices cards-text">
                     <tr>
@@ -357,7 +357,7 @@
                     </tr>
                 </table>
                 <!--Second part of menu-->
-                <table class="prices prices2 cards-text">
+                <table class="prices cards-text">
                     <tr>
                         <td>Plant-based Cheeseburger</td>
                         <td>€3.50</td>
@@ -387,7 +387,7 @@
         
         <!--Simple call to action with a button linking to an internal page for information on reservations-->
         <div id="come-visit">
-            <h2>Come visit us!</h2>
+            <h2 class="flex-text">Come visit us!</h2>
             <p>Walk-ins are always welcome during opening hours, but you can book a table ahead of time to make sure that there is enough space for your group. We also have private rooms available upstairs for parties or focused game sessions.</p>
             <button class="button-animated"> <a href="./bookings.html" id="bookings-link">To the bookings page<i class="fa-solid fa-arrow-right-long"></i></a></button>
         </div>
