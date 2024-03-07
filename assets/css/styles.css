@@ -24,6 +24,21 @@ body {
     background-color: #1a1d3f;
     color: #c79306;
 }
+/*Flex properties*/
+.column-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+.row-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+.no-wrap {
+    display: flex;
+    flex-wrap: nowrap;
+}
 
 /*Text*/
 h2, h3 {
@@ -68,7 +83,7 @@ li {
     box-shadow: 0 5px #aaaa5b;
     transform: translateY(4px);
 }
-/*Creates crescent moon shaped border below the element*/
+/*Creates crescent moon shaped bottom border*/
 .moon-border {
     border-bottom: 3rem solid #c79306;
     border-radius: 0 0 50% 50%;
@@ -81,10 +96,8 @@ header {
     position: absolute;
     padding: 0 1rem 3rem;
     font-size: larger;
-    display: flex;
     justify-content: space-around;
     align-items: center;
-    flex-wrap: wrap;
 }
 .clean-link {
     text-decoration: none;
@@ -132,14 +145,13 @@ header {
     top: 5%;
 }
 /*Logo*/
-.logo {
-    order: 2;
+.all-center {
     text-align: center;
-    /*Flex properties to stack image and text on small screens*/
-    display: flex;
-    flex-wrap: nowrap;
     align-items: center;
     justify-content: center;
+}
+#logo {
+    order: 2;
     flex-direction: column;
 }
 .logo-img {
@@ -175,10 +187,7 @@ nav li:hover {
 }
 /*Main content*/
 main {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    margin-top: calc(50px + 20vh); /*Calculates top margin based on viewport height*/
+    margin-top: calc(50px + 18vh); /*Calculates top margin based on viewport height*/
     width: 100%;
 }
 hr {
@@ -203,8 +212,9 @@ main li::marker {
 .blur-block {
     width: 100%;
     position: absolute;
-    top: 1rem;
-    box-shadow: 0px -15px 15px 20px #1a1d3f;
+    z-index: 97;
+    top: 17vh;
+    box-shadow: 0px -15px 15px 100px #1a1d3f;
 }
 /*Hero text*/
 #hero-right, #hero-left {
@@ -239,12 +249,9 @@ main li::marker {
     align-self: center;
 }
 .cards {
-    display: flex;
     position: relative;
     flex: 1 0 auto;
     justify-content: space-evenly;
-    flex-wrap: wrap;
-    flex-direction: row;
     align-items: center;
 }
 .yellow-cards, .blue-cards {
@@ -253,7 +260,6 @@ main li::marker {
     border-radius: 0 0 50% 50%;
     border-bottom: 21px solid #c79306;
     border-top: 1px solid #c79306;
-    flex-direction: column;
     line-height: 20px;
 }
 .yellow-cards {
@@ -287,14 +293,11 @@ td, th {
 
     /*Come visit us section*/
     #come-visit {
-        display: flex;
-        flex-wrap: wrap;
         padding: 2rem;
         line-height: 1.5;
         font-size: 120%;
         align-items: center;
         justify-content: center;
-        flex-direction: column;
     }
     #come-visit p, #come-visit h2 {
         padding-bottom: 1rem;
@@ -413,50 +416,37 @@ td, th {
 
 /*Footer*/
 footer {
-    display: flex;
     position: relative;
     background-color: #c79306;
     color: #1a1d3f;
     /*Flex properties to space out footer content*/
-    flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
 }
-    /*Business Address*/
-    #address {
-        order: 1;
-    }
-    #address p {
-        line-height: 0.1;  
-    }
-    /*Opening hours*/
-    #opening-hours {
-        order: 3;
-    }
-    /*Social icons and bottom logo*/
-    #branding {
-        order: 2;
-        padding: 20px 0;
-        display: flex;
-        flex-wrap: wrap;
-        align-content: space-around;
-        text-align: center;
-        flex-direction: column;
-        justify-content: space-between;        
-    }
-
-    #social-networks {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-    }
-
-    #social-networks i {
-        font-size: 160%;
-        padding: 5%;
-        color: #a80cc4;
-    }
-
+#address {
+    order: 1;
+    line-height: 2.5;
+}
+/*Opening hours*/
+#opening-hours {
+    order: 3;
+}
+/*Social icons and bottom logo*/
+#branding {
+    order: 2;
+    padding: 20px 0;
+    align-content: space-around;
+    text-align: center;
+    justify-content: space-between;        
+}
+#social-networks {
+    justify-content: space-between;
+}
+#social-networks i {
+    font-size: 160%;
+    padding: 5%;
+    color: #a80cc4;
+}
 /* Media query: large/landscape phones (576px and up)*/
 @media screen and (min-width:576px) {
     /*Reduces the size of the tagline text on larger screens to look cleaner*/

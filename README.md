@@ -2,7 +2,7 @@ check https://github.com/amylour/scoops_pp1?tab=readme-ov-file#user-experience-u
 
 # Night Owlzzz
 
-[View live project here on GitHub Pages]()
+[View live project here on GitHub Pages](https://chl03rivs.github.io/night-owlzzz/index.html)
 
 Night Owlzzz is a late-night café-bar in Cork for those looking to escape the drink culture of the city without giving up on having a fun night out. Visitors can play board games, read, or simply hang out until the late hours while sipping on hot drinks, mocktails or eating healthy snacks and sandwiches. 
 
@@ -94,7 +94,7 @@ footer
 * [Git]() - used for version control
 * [Google Fonts]() - to import website font
 * [Font Awesome]() - icons and their associated kit were downloaded from here
-* [My Color Space](https://mycolor.space ) - for the color palette
+* [My Color Space](https://mycolor.space) - for the color palette
 * 
 * [Favicon.io]() - to generate favicon files
 * [Google Dev Tools]() - to debug and test responsiveness
