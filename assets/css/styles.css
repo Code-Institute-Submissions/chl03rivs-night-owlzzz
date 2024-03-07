@@ -53,7 +53,7 @@ li {
     position: relative;
     padding-left: 10px;
 }
-/*Button animation based on the W3Schools documentation here: https://www.w3schools.com/css/css3_buttons.asp#:~:text=Try%20it%20Yourself%20%C2%BB-,Animated%20Buttons,-Example */
+/*Button animation*/
 .button-animated {
     background-color: #c79306;
     color: #1a1d3f;
@@ -163,7 +163,7 @@ nav li:hover {
     color: #a80cc4;
     text-decoration: underline;
 }
-/*Adds moon icon next to active link following the documentation of Font Awesome here: https://origin.fontawesome.com/docs/web/add-icons/pseudo-elements#font-families-and-styles-cheat-sheet */
+/*Moon icon for active link marker*/
 .active::marker {
     font: var(--fa-font-regular);
     content: "\f186";
@@ -189,9 +189,8 @@ hr {
 }
 /*Styles list items markers in main content*/
 main li::marker {
-    /*Adds moon icon in place of the bullet point following the documentation of Font Awesome here: https://origin.fontawesome.com/docs/web/add-icons/pseudo-elements#font-families-and-styles-cheat-sheet */
     font: var(--fa-font-regular);
-    content: "\f186";
+    content: "\f186"; /*Font Awesome moon icon*/
 }
 /*Hero image*/
 .hero {
@@ -200,7 +199,7 @@ main li::marker {
     align-items: center;
     justify-content: center;
 }
-/*A blurred block overlapping with the top of the hero image so it fades into the background, thanks to this W3S guide: https://www.w3schools.com/cssref/css3_pr_box-shadow.php */
+/*Hero top overlay*/
 .blur-block {
     width: 100%;
     position: absolute;

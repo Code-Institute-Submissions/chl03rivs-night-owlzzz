@@ -1,110 +1,153 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+check https://github.com/amylour/scoops_pp1?tab=readme-ov-file#user-experience-ux 's readme for links again
 
-Welcome Chloë Rivière,
+# Night Owlzzz
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+[View live project here on GitHub Pages]()
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+Night Owlzzz is a late-night café-bar in Cork for those looking to escape the drink culture of the city without giving up on having a fun night out. Visitors can play board games, read, or simply hang out until the late hours while sipping on hot drinks, mocktails or eating healthy snacks and sandwiches. 
 
-## Gitpod Reminders
+The website will be targeted to new and returning customers alike. Night Owlzz will be useful for customers looking to book a table/room in advance and prepare for their visit (by browsing the list of games, food, etc.).
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+----
+----
+### Contents
 
-`python3 -m http.server`
+*table of contents*
 
-A blue button should appear to click: _Make Public_,
+----
+## User Experience
+----
 
-Another blue button should appear to click: _Open Browser_.
+Night Owlzzz is a cosy café-bar with loads to offer. It required a unique but straight-forward design that could host enough information for the new and returning visitors alike.
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+*Key information on the website*
+*
+*
+*
 
-A blue button should appear to click: _Make Public_,
+### User stories
+*First time visitor*
 
-Another blue button should appear to click: _Open Browser_.
+* A first time visitors can immediately understand what the business is about from the homepage
+* The user is invited to walk into the shop or book a slot for their group ahead of time
+* The location and opening hours of the business are easily accessible at the footer with very little scrolling on the homepage (and recurring on every page)
+* The user can easily navigate to the game list or menu using the navigation bar to prepare themselves for their visit
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+*Returning visitor*
 
-To log into the Heroku toolbelt CLI:
+* Returning users can quickly scroll to the footer to check the opening-hours of the business
+* They can navigate to the menu and games pages to prepare for their visit
+*
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+*Frequent visitor*
+*
+*
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+----
+## Design
+----
+### Color palette
 
-------
 
-## Release History
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+### Typography
 
-**September 20 2023:** Update Python version to 3.9.17.
+### Imagery
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
-
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
-
-**July 2 2021:** Remove extensions that are not available in Open VSX.
-
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
-
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
-
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
-
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
-
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
-
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
-
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
-
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
-
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
-
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
-
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
 
 ------
-
-## FAQ about the uptime script
-
-**Why have you added this script?**
-
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
-
-**How will this affect me?**
-
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
-
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
-
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
-
-**So….?**
-
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
-
-**Can I opt out?**
-
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
-
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
-
-**Anything more?**
-
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
-
+## Features
 ---
 
-Happy coding!
+### Page features
+navbar
+
+hero image
+tagline and call to action
+business ethos
+menu page
+games page
+booking page
+contact page
+footer
+
+### Future features
+----
+
+* *Blog section* - to provide users with game tutorials and reviews for an enhanced in-person experience. 
+    * I believe that this would be a helpful feature to have on the website as it would help visitors decide what game they would like to play before their visit. 
+    * It would also make it easier for party members that are new to board games to learn ahead of time and enjoy their visit more.
+* *Form confirmation page* - to provide users with a confirmation message post form submission.
+
+----
+##Technologies used
+-----
+
+* HTML
+* CSS
+
+###Frameworks, libraries, technologies and programs used
+
+* [Justinmind]() - used to create wireframes
+* [Canva]() - to create logo and favicon
+* [GitHub]() - used to save and store all of the website's files
+* [Git]() - used for version control
+* [Google Fonts]() - to import website font
+* [Font Awesome]() - icons and their associated kit were downloaded from here
+* [My Color Space](https://mycolor.space ) - for the color palette
+* 
+* [Favicon.io]() - to generate favicon files
+* [Google Dev Tools]() - to debug and test responsiveness
+* [Google Lighthouse]() - for auditing the website
+* [W3C Validator]() - for validating the HTML and CSS code
+
+-----
+##Deployment
+----
+
+steps to deploy
+
+----
+##Testing
+----
+###Initial testing plan
+
+### Testing
+
+### HTML validation
+
+### CSS validation
+
+### Lighthouse scores
+
+### Bugs and fixes
+
+### Unsolved Bugs
+
+---
+##Credits
+----
+###Content references
+
+* All content written for the website is purely fictional, and for educational purposes only.
+* [Code Institute](https://codeinstitute.net) for their amazing modules on HTML and CSS.
+* [W3Schools](https://www.w3schools.com/) for additional learning materials and tutorials, specifically:
+    * [Button animation](https://www.w3schools.com/css/css3_buttons.asp#:~:text=Try%20it%20Yourself%20%C2%BB-,Animated%20Buttons,-Example);
+    * [Box shadow doc](https://www.w3schools.com/cssref/css3_pr_box-shadow.php) which, along with [this Stackoverflow thread](https://stackoverflow.com/questions/24709915/blur-the-edges-of-an-image-or-background-image-with-css) helped me create a blurred block overlapping with the top of my hero images so they blend into the background.
+* [Font Awesome's documentation](https://origin.fontawesome.com/docs/web/add-icons/pseudo-elements#font-families-and-styles-cheat-sheet), which helped me use their moon icon as a list marker to replace bullet points.
+* [Kera Cudmore - Creating your First README](https://github.com/kera-cudmore/readme-examples) for README structure and Markdown guidance.
+
+### Media References
+
+* Unsplash for all images used on this site. Credit to photographers:
+    * 
+    * 
+* [Font Awesome](https://fontawesome.com/) for all the icons used on this site.
+* Canva for the design of the NightOwlzzz logo and favicon.
+* Favicon.io to generate the favicons of this project.
+* Google Maps for the embedded map used.
+
+### Acknowledgements
+
+* I would like to acknowledge my Code Institute mentor, Oluwafemi Medale, for his guidance and encouragement on this project.
+* My family and friends for testing my work and providing me with so many point of views and thoughts on my work.
