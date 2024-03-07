@@ -20,9 +20,9 @@
 </head>
 
 <body>
-    <header class="moon-border">
+    <header class="no-wrap moon-border">
         <!--Logo-->
-        <div class="logo">
+        <div class="no-wrap all-center" id="logo">
            <a class="logo clean-link" href="./index.html">
                <img class="logo-img" src="./assets/images/transparent-logo.png" alt="Night Owlzzz logo, an owl holding a cup of coffee in its claws">
                <h1 class="flex-text">Night Owlzzz</h1>
@@ -53,7 +53,7 @@
            </nav>
    </header>
 
-    <main>
+    <main class="column-wrap">
         <div class="hero">
             <!--Block with CSS to blur the top edge of the picture on small screens so that it blends in with the background-->
             <div class="blur-block"></div>
@@ -61,12 +61,12 @@
             <h2 class="hero-text">Bookings</h2>
         </div>
 
-        <p class="regular-text">Although we accept walk-ins, we cannot ensure that there will always be enough room for your group on any given day. You can easily reserve a table or room by contacting our team using the form below, or by phoning: <span class="color-pop">+353 833 221 100</span></p>
+        <p>Although we accept walk-ins, we cannot ensure that there will always be enough room for your group on any given day. You can easily reserve a table or room by contacting our team using the form below, or by phoning: <span class="color-pop">+353 833 221 100</span></p>
         <section id="booking-options">
             <div class="rounded-cards">
                 <h3>Option 1: Free (+ deposit)</h3>
                 <hr>
-                <p class="cards-text">A reserved area for a small group (not a private room)</p>
+                <p>A reserved area for a small group (not a private room)</p>
                 <ul>
                     <li>Suits groups of 5 or less</li>
                     <li>Food and drinks not included</li>
@@ -76,7 +76,7 @@
             <div class="rounded-cards">
                 <h3>Option 2: €10 per person</h3>
                 <hr>
-                <p class="cards-text">A reserved area for larger groups (not a private room)</p>
+                <p>A reserved area for larger groups (not a private room)</p>
                 <ul>
                     <li>Suits groups of 10+</li>
                     <li>1 free mocktail per person</li>
@@ -86,7 +86,7 @@
             <div class="rounded-cards">
                 <h3>Option 3: Private room</h3>
                 <hr>
-                <p class="cards-text">Private rooms can be rented out for a day or longer periods of time.</p>
+                <p>Private rooms can be rented out for a day or longer periods of time.</p>
                 <ul>
                     <li>Private rooms (for up to 30 people)</li>
                     <li>Function room (for up to 90 guests)</li>
@@ -95,7 +95,7 @@
                 </ul>
             </div>
         </section>
-        <div class="golden-box"">
+        <div class="golden-box column-wrap">
             <h2>Please note:</h2>
             <ul>
                 <li>A deposit is required in order to secure your booking(s) and will be refunded on the night of.</li>
@@ -103,10 +103,10 @@
             </ul>
         </div>
         <!--Inquiry form that will lead to a confirmation page-->
-        <form method="get" action="" target="_blank" id="inquiry-form">
+        <form method="get" action="" target="_blank" class="column-wrap" id="inquiry-form">
             <fieldset class="inquiry">
                 <legend>Booking inquiry</legend>
-                <fieldset class="inquiry" id="group-section">
+                <fieldset class="inquiry">
                     <legend>About your group</legend>
                     <label for="members">Party members:</label>
                     <input type="number" id="members" class="members" required>
@@ -147,7 +147,7 @@
                     <input type="time" id="time" name="time" required>
                     <br>
                 </fieldset>
-                <fieldset class="inquiry" id="you-section">
+                <fieldset class="inquiry">
                     <legend>About you</legend>
                     <label for="f-name">First name:</label>
                     <input type="text" id="f-name" name="f-name" required>
@@ -162,7 +162,7 @@
                     <input type="text" id="phone-number" name="phone-number">
                     <br>
                 </fieldset>
-                <fieldset class="inquiry" id="notes-section">
+                <fieldset class="inquiry">
                     <legend>Additional information</legend>
                     <label for="notes">You can type out any additional information, questions or special requests you might have below:</label>
                     <br>
@@ -170,14 +170,14 @@
                 </fieldset>
             </fieldset>
 
-            <button class="button-animated" id="send-form">Submit <i class="fa-solid fa-paper-plane"></i></button>
+            <button class="clean-button button-animated" >Submit <i class="fa-solid fa-paper-plane"></i></button>
         </form>
         
         <!--Embedded Google Map with a yellow border on top to better fit in our aesthetics-->
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2461.859429406296!2d-8.47064992348061!3d51.9000293719052!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4844900e54e6370d%3A0xe7f166aab1e1dbf!2sMerchant&#39;s%20Quay%2C%20Centre%2C%20Cork!5e0!3m2!1sen!2sie!4v1708970649845!5m2!1sen!2sie" width="100%" height="450" style="border-top:2rem solid #c79306;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" aria-label="map of Cork city showing the business's location on Merchant's quay"></iframe>
     </main>
 
-    <footer>
+    <footer class="row-wrap">
         <!--Business Address-->
         <div id="address">
             <p>Merchant's Quay</p>
