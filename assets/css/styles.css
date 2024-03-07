@@ -403,6 +403,10 @@ input, textarea {
     width: 100%;
     min-height: 4rem;
 }
+/*About*/
+#save-the-cat {
+    margin-top: calc(2rem + 6vh);
+}
 
 /*Footer*/
 footer {
@@ -496,5 +500,9 @@ footer p {
     /*Add more space between cards on desktop*/
     #services-games, #services-bar, #services-books, #services-food, #services-wifi {
         margin: 20px;
+    }
+    /*About*/
+    #save-the-cat {
+        margin-top: calc(10rem + 6vh);
     }
 }
