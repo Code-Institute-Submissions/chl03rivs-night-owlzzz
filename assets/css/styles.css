@@ -43,10 +43,10 @@ body {
 h1 {
     font-size: calc(13px + 3vw);
 }
-h2 {
+h2, .menu-display h3 {
     font-size: calc(13px + 2vw);
 }
-h3 {
+h3, .prices {
     font-size: calc(13px + 1vw);
 }
 h2, h3, legend {
@@ -344,8 +344,8 @@ main li::marker {
 /*Menu page*/
 .menu-display {
     width: 100% !important;
-    min-height: 100vh !important;
     border-radius: 0 !important;
+    padding: 1rem 0 2rem;
 }
 td, th {
     padding: 10px;
@@ -353,10 +353,11 @@ td, th {
 .prices {
     display: inherit;
     justify-content: space-evenly;
-    font-size: 1.5rem;
     line-height: 1.5;
-    padding: 0 0 3rem;
 } 
+.prices td:last-of-type {
+    text-align-last: right;
+}
 
 /*Bookings page*/
 #booking-options {
@@ -458,6 +459,7 @@ footer p {
     /*Re-enables the crescent moon bottom borders on larger screens*/
     .menu-display {
         border-radius: 0 0 50% 50% !important;
+        padding: 5px 0 5rem;;
     }
 }    
 
