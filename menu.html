@@ -20,12 +20,12 @@
 </head>
 
 <body>
-    <header class="moon-border">
+    <header class="no-wrap moon-border">
         <!--Logo-->
-        <div class="logo">
+        <div class="no-wrap all-center" id="logo">
            <a class="logo clean-link" href="./index.html">
                <img class="logo-img" src="./assets/images/transparent-logo.png" alt="Night Owlzzz logo, an owl holding a cup of coffee in its claws">
-               <h1 class="flex-text">Night Owlzzz</h1>
+               <h1>Night Owlzzz</h1>
            </a>
        </div>
        <!--Navigation-->
@@ -53,7 +53,7 @@
            </nav>
    </header>
 
-    <main>
+    <main class="column-wrap">
         <!--Hero image-->
         <div class="hero">
             <!--Block with CSS to blur the top edge of the picture on small screens so that it blends in with the background-->
@@ -65,10 +65,10 @@
         <!--Section title-->
         <h2 class="flex-text">Have a look at our food and drinks menu</h2>
 
-        <section class="cards">
-            <div class="menu-display blue-cards">
-                <h3>Hot drinks <i class="fa-solid fa-mug-hot"></i></h3>
-                <table class="prices cards-text">
+        <section class="cards row-wrap">
+            <div class="column-wrap menu-display blue-cards">
+                <h3 class="card-headings">Hot drinks <i class="fa-solid fa-mug-hot"></i></h3>
+                <table class="prices">
                     <tr>
                         <th>Coffees</th>
                         <th>Regular</th>
@@ -106,7 +106,7 @@
                     </tr>
                 </table>
                 <!--Second part of menu-->
-                <table class="prices cards-text">
+                <table class="prices">
                     <tr>
                         <th>Teas</th>
                         <th>Regular</th>
@@ -144,9 +144,9 @@
                     </tr>
                 </table>
             </div>
-            <div class="menu-display yellow-cards">
-                <h3>Cold drinks <i class="fa-solid fa-martini-glass-empty"></i></h3>
-                <table class="prices cards-text">
+            <div class="column-wrap menu-display yellow-cards">
+                <h3 class="card-headings">Cold drinks <i class="fa-solid fa-martini-glass-empty"></i></h3>
+                <table class="prices">
                     <tr>
                         <th>Non-Alcoholic</th>
                         <th></th>
@@ -177,7 +177,7 @@
                     </tr>
                 </table>
                 <!--Second part of menu-->
-                <table class="prices cards-text">
+                <table class="prices">
                     <tr>
                         <th>Mocktails</th>
                         <th></th>
@@ -208,9 +208,9 @@
                     </tr>
                 </table>
             </div>
-            <div class="menu-display blue-cards">
-                <h3>Snacks <i class="fa-solid fa-cookie-bite"></i></h3>
-                <table class="prices cards-text">
+            <div class="column-wrap menu-display blue-cards">
+                <h3 class="card-headings">Snacks <i class="fa-solid fa-cookie-bite"></i></h3>
+                <table class="prices">
                     <tr>
                         <td>Veg and hummus tray</td>
                         <td>€3.50</td>
@@ -237,7 +237,7 @@
                     </tr>
                 </table>
                 <!--Second part of menu-->
-                <table class="prices cards-text">
+                <table class="prices">
                     <tr>
                         <td>Veg and hummus tray</td>
                         <td>€3.50</td>
@@ -264,9 +264,9 @@
                     </tr>
                 </table>
             </div>
-            <div class="menu-display yellow-cards">
-                <h3>Baked goods <i class="fa-solid fa-cheese"></i></h3>
-                <table class="prices cards-text">
+            <div class="column-wrap menu-display yellow-cards">
+                <h3 class="card-headings">Baked goods <i class="fa-solid fa-cheese"></i></h3>
+                <table class="prices">
                     <tr>
                         <th></th>
                         <th>(per bite)</th>
@@ -297,7 +297,7 @@
                     </tr>
                 </table>
                 <!--Second part of menu-->
-                <table class="prices cards-text">
+                <table class="prices">
                     <tr>
                         <th></th>
                         <th>(per slice)</th>
@@ -328,9 +328,9 @@
                     </tr>
                 </table>
             </div>
-            <div class="blue-cards menu-display">
-                <h3>Sandwiches <i class="fa-solid fa-burger"></i></h3>
-                <table class="prices cards-text">
+            <div class="column-wrap blue-cards menu-display">
+                <h3 class="card-headings">Sandwiches <i class="fa-solid fa-burger"></i></h3>
+                <table class="prices">
                     <tr>
                         <td>PB & Jam</td>
                         <td>€2.50</td>
@@ -357,7 +357,7 @@
                     </tr>
                 </table>
                 <!--Second part of menu-->
-                <table class="prices cards-text">
+                <table class="prices">
                     <tr>
                         <td>Plant-based Cheeseburger</td>
                         <td>€3.50</td>
@@ -386,10 +386,10 @@
         </section>
         
         <!--Simple call to action with a button linking to an internal page for information on reservations-->
-        <div id="come-visit">
+        <div class="column-wrap" id="come-visit">
             <h2 class="flex-text">Come visit us!</h2>
-            <p>Walk-ins are always welcome during opening hours, but you can book a table ahead of time to make sure that there is enough space for your group. We also have private rooms available upstairs for parties or focused game sessions.</p>
-            <button class="button-animated"> <a href="./bookings.html" id="bookings-link">To the bookings page<i class="fa-solid fa-arrow-right-long"></i></a></button>
+            <p class="regular-text">Walk-ins are always welcome during opening hours, but you can book a table ahead of time to make sure that there is enough space for your group. We also have private rooms available upstairs for parties or focused game sessions.</p>
+            <button class="button-animated"> <a href="./bookings.html">To the bookings page<i class="fa-solid fa-arrow-right-long"></i></a></button>
         </div>
         
         <!--Embedded Google Map with a yellow border on top to better fit in our aesthetics-->

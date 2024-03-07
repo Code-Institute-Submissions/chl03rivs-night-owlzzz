@@ -41,26 +41,41 @@ body {
 }
 
 /*Text*/
-h2, h3 {
-    text-align: center;
-    text-transform: uppercase;
-    padding: 0 1rem 2rem;
-}
-.flex-text {
-    /*Keeps font size large enough on all devices based on viewport width*/
+h1 {
     font-size: calc(13px + 3vw);
 }
-.regular-text {
-    font-size: 22px;
-    text-align: justify;
-    line-height: 2;
-    width: 70%;
+h2 {
+    font-size: calc(13px + 2vw);
+}
+h3 {
+    font-size: calc(13px + 1vw);
+}
+h2, h3 {
+    text-transform: uppercase;
+    padding: 0 1rem 2rem;
+    line-height: 1.5;
+    text-align: center;
+}
+h2, h3, p {
     align-self: center;
+}
+p {
+    font-size: 22px;
+    line-height: 1.5;
+    width: 70%;
     padding: 1rem 2rem;
     margin: 2rem;
+    text-align: justify;
 }
 .indent {
     padding-left: 2rem;
+}
+.color-pop {
+    display: inline-block;
+    color: #1a1d3f;
+    background-color: #e190dd;
+    padding: 0.5rem;
+    border-radius: 20px;
 }
 /*Links*/
 li {
@@ -103,6 +118,7 @@ header {
     text-decoration: none;
     color: #c79306;
 }
+
 /*Navigation*/
 /*Makes the toggle button (checkbox) invisible*/
 #nav-toggle {
@@ -240,14 +256,16 @@ main li::marker {
     font-size: 5vw;
     line-height: 1;
 }
-
-/*Coloured cards*/
-#cards-title {
-    text-transform: uppercase;
-    padding: 1.5rem;
-    font-size: 1.5rem;
+/*Containers*/
+.golden-box {
+    border: 1px solid #c79306;
+    border-radius: 20px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    width: 70%;
     align-self: center;
 }
+/*Coloured cards*/
 .cards {
     position: relative;
     flex: 1 0 auto;
@@ -270,34 +288,39 @@ main li::marker {
     background-color: #1a1d3f;
     color: #c79306;
 }
+.rounded-cards {
+    background-color: #1a1d3f;
+    font-size: 1.2rem;
+    margin: 1rem;
+    padding: 1.5rem;
+    border-radius: 20px;
+    min-height: 15rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+}
 /*Menu page*/
 .menu-display {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    /*Overrides width and height properties assigned to all cards*/
     width: 100vw !important;
     min-height: 100vh !important;
-    /*Removes the crescent moon bottom border on smaller devices so the content does not bleed out*/
     border-radius: 0 !important;
 }
 td, th {
     padding: 10px;
 }   
 .prices {
-    display: flex;
-    flex-wrap: wrap;
+    display: inherit;
     justify-content: space-evenly;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    padding: 0 0 3rem;
 } 
 
 
     /*Come visit us section*/
     #come-visit {
-        padding: 2rem;
-        line-height: 1.5;
-        font-size: 120%;
-        align-items: center;
-        justify-content: center;
     }
     #come-visit p, #come-visit h2 {
         padding-bottom: 1rem;
@@ -315,15 +338,20 @@ td, th {
             margin: 4%;
         }
 
-/*Styles for Bookings.html page*/
-    
-    .color-pop {
-        display: inline-block;
-        color: #1a1d3f;
-        background-color: #e190dd;
-        padding: 0.5rem;
-        border-radius: 20px;
-    }
+/*Bookings page*/
+#booking-options p, #booking-options li {
+    width: 80%;
+    line-height: 1.5;
+    padding: 0;
+    font-size: 1.3rem;
+    text-align: justify;
+}
+#booking-options ul, #booking-options li {
+    padding-left: 10px;
+    width: 100% ;
+}
+
+
     /*Booking options*/
     #booking-options {
         background-color: #c79306;
@@ -344,29 +372,8 @@ td, th {
         line-height: 1;
         padding: 0 0 1rem;
     }
-/*Containers*/
-.rounded-cards {
-    background-color: #1a1d3f;
-    font-size: 105%;
-    margin: 1rem;
-    padding: 1.5rem;
-    border-radius: 20px;
-    min-height: 15rem;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    align-content: center;
-}
-.golden-box {
-    border: 1px solid #c79306;
-    border-radius: 20px;
-    padding: 2rem;
-    margin-bottom: 2rem;
-    width: 70%;
-    align-self: center;
-}
-    /*Booking inquiry form*/
+
+/*Booking inquiry form*/
     #inquiry-form {
         background-color: #c79306;
         color: #1a1d3f;
@@ -423,11 +430,14 @@ footer {
     justify-content: space-around;
     align-items: center;
 }
+footer p {
+    width: 100%;
+    line-height: 0.5;
+    padding: 0;
+}
 #address {
     order: 1;
-    line-height: 2.5;
 }
-/*Opening hours*/
 #opening-hours {
     order: 3;
 }
