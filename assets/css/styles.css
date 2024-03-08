@@ -489,7 +489,7 @@ footer p {
 }    
 
 /*Media query for larger screens (1224px and up)*/
-@media screen and (min-device-width:1224px) {
+@media screen and (min-width:1224px) {
     /*Header*/
     header {
         flex-wrap: nowrap;
