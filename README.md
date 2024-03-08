@@ -9,21 +9,10 @@ Night Owlzzz is a late-night café-bar in Cork for those looking to escape the d
 The website will be targeted to new and returning customers alike. Night Owlzz will be useful for customers looking to book a table/room in advance and prepare for their visit (by browsing the list of games, food, etc.).
 
 ----
-----
-### Contents
-
-*table of contents*
-
-----
 ## User Experience
 ----
 
 Night Owlzzz is a cosy café-bar with loads to offer. It required a unique but straight-forward design that could host enough information for the new and returning visitors alike.
-
-*Key information on the website*
-*
-*
-*
 
 ### User stories
 *First time visitor*
@@ -33,15 +22,10 @@ Night Owlzzz is a cosy café-bar with loads to offer. It required a unique but s
 * The location and opening hours of the business are easily accessible at the footer with very little scrolling on the homepage (and recurring on every page)
 * The user can easily navigate to the game list or menu using the navigation bar to prepare themselves for their visit
 
-*Returning visitor*
+*Returning/frequent visitors*
 
 * Returning users can quickly scroll to the footer to check the opening-hours of the business
 * They can navigate to the menu and games pages to prepare for their visit
-*
-
-*Frequent visitor*
-*
-*
 
 ----
 ## Design
@@ -95,25 +79,7 @@ The entire website uses the same font: [Kode Mono](https://fonts.google.com/spec
 
 It's a monospace font which contributes to the "retro" and "gaming" themes of the business.
 
-### Imagery
-
-
 ------
-## Features
----
-
-### Page features
-navbar
-
-hero image
-tagline and call to action
-business ethos
-menu page
-games page
-booking page
-contact page
-footer
-
 ### Future features
 ----
 
@@ -121,6 +87,7 @@ footer
     * I believe that this would be a helpful feature to have on the website as it would help visitors decide what game they would like to play before their visit. 
     * It would also make it easier for party members that are new to board games to learn ahead of time and enjoy their visit more.
 * *Form confirmation page* or *pop-up* - to provide users with a confirmation message post form submission.
+* *A sticky header* - for better navigation
 
 ----
 ## Technologies used
@@ -131,18 +98,17 @@ footer
 
 ### Frameworks, libraries, technologies and programs used
 
-* [Justinmind]() - used to create wireframes
-* [Canva]() - to create logo and favicon
-* [GitHub]() - used to save and store all of the website's files
-* [Git]() - used for version control
-* [Google Fonts]() - to import website font
-* [Font Awesome]() - icons and their associated kit were downloaded from here
+* [Canva](https://canva.com) - to create logo and favicon
+* GitHub - used to save and store all of the website's files
+* Git - used for version control
+* Google Fonts - to import website font
+* [Font Awesome](fontawesome.com/) - icons and their associated kit were downloaded from here
 * [My Color Space](https://mycolor.space) - for the initial color palette
 * [WebAIM contrast checker](https://webaim.org/resources/contrastchecker/) - to create a more accessible color palette
-* [Favicon.io]() - to generate favicon files
-* [Google Dev Tools]() - to debug and test responsiveness
-* [Google Lighthouse]() - for auditing the website
-* [W3C Validator]() - for validating the HTML and CSS code
+* [Favicon.io](https://favicon.io) - to generate favicon files
+* Google Dev Tools - to debug and test responsiveness
+* The [official W3C validator](https://validator.w3.org/nu) - to test HTML
+* The [official (Jigsaw) validator](https://jigsaw.w3.org/css-validator/) - to test CSS
 
 -----
 ## Deployment
@@ -162,21 +128,39 @@ Github Pages was used to deploy this live website. The steps taken were as follo
 ## Testing
 ----
 
-### Testing
+Testing was performed throughout development using multiple devices along with the Chrome Dev Tools. I made sure to deploy the website early so I could test it on a range of devices and have a real-life impression of it.
 
 ### HTML validation
 
-No errors were returned when passing through the official W3C validator
+No errors were returned when passing through the [official W3C validator](https://validator.w3.org/nu):
+
+![HTML check results](./assets/docs/html-check.PNG)
 
 ### CSS validation
 
-No errors were found when passing through the official (Jigsaw) validator
+No errors were found when passing through the [official (Jigsaw) validator](https://jigsaw.w3.org/css-validator/):
 
-### Lighthouse scores
+![Jigsaw CSS validation results](./assets/docs/css-check.PNG)
+
+Upon using the tool for validating my CSS, it did mention a few warnings regarding:
+
+* The use of "-webkit" elements/pseudo-elements as they are vendor elements. 
+* Likewise with the use of CSS variables to include the Font Awesome icon as a font for markers.
+
+These do not invalidate the website's CSS.
 
 ### Bugs and fixes
 
-### Unsolved Bugs
+One of the issues I encountered during development was the display on mobile devices and smaller laptops. I noticed that a horizontal scroll was enabled on most of the pages.
+
+After investigating, I was able to fix the problem:
+
+* I was using 100vw (viewport-width) as the width of most elements
+* I changed it to 100% and it fixed the issue
+
+This is because the unit vw takes into consideration the whole viewport width, without excluding the width of the vertical scroll bar.
+
+Using a percentage value uses the whole visible screen instead and therefore removes the horizontal scroll.
 
 ---
 ## Credits
@@ -193,16 +177,13 @@ No errors were found when passing through the official (Jigsaw) validator
 
 ### Media References
 
-* Unsplash for all images used on this site. Credit to photographers:
-    * 
-    * [Tyler Nix](https://unsplash.com/@nixcreative)
-    * [Khyati Trehan](https://unsplash.com/@khyatitrehan)
+* [Unsplash](https://unsplash.com) for all images used on this site.
 * [Font Awesome](https://fontawesome.com/) for all the icons used on this site.
-* Canva for the design of the NightOwlzzz logo and favicon.
+* [Canva](https://canva.com/) for the design of the NightOwlzzz logo and favicon.
 * Favicon.io to generate the favicons of this project.
 * Google Maps for the embedded map used.
 
 ### Acknowledgements
 
 * I would like to acknowledge my Code Institute mentor, Oluwafemi Medale, for his guidance and encouragement on this project.
-* My family and friends for testing my work and providing me with so many point of views and thoughts on my work.
+* My family and friends for testing my work and providing me with so many point of views and thoughts on the website throughout its development.
