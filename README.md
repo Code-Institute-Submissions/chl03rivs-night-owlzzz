@@ -122,15 +122,6 @@ footer
     * It would also make it easier for party members that are new to board games to learn ahead of time and enjoy their visit more.
 * *Form confirmation page* or *pop-up* - to provide users with a confirmation message post form submission.
 
-***
-## Testing
-
-### Validator Testing
-
-* HTML testing - No errors were returned when passing through the official W3C validator
-
-* CSS testing - No errors were found when passing through the official (Jigsaw) validator
-
 ----
 ## Technologies used
 -----
@@ -156,8 +147,16 @@ footer
 -----
 ## Deployment
 ----
+Github Pages was used to deploy this live website. The steps taken were as follows:
 
-steps to deploy
+1. Log in (or sign up) to [Github](https://github.com).
+2. Find the repository for this project from [my profile](https://github.com/chl03rivs) in [night-owlzzz](https://github.com/chl03rivs).
+3. Click on the *Settings* link.
+4. Click on the *Pages* link in the left hand side navigation bar.
+5. In the *Source* section, choose *main* from the drop down select branch menu. 
+6. Select *Root* from the drop down select folder menu.
+7. Click *Save*. 
+8. Your live Github Pages site is now deployed at the URL shown.
 
 ----
 ## Testing
@@ -167,7 +166,11 @@ steps to deploy
 
 ### HTML validation
 
+No errors were returned when passing through the official W3C validator
+
 ### CSS validation
+
+No errors were found when passing through the official (Jigsaw) validator
 
 ### Lighthouse scores
 

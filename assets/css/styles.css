@@ -108,6 +108,8 @@ li {
     margin: 4%;
     height: fit-content;
     align-self: center;
+    text-align: center;
+    padding: 2px;
 }
 /*Button animation*/
 .button-animated {
