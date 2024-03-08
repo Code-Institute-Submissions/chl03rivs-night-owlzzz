@@ -413,7 +413,14 @@ input, textarea {
 #save-the-cat {
     margin-top: calc(2rem + 6vh);
 }
-
+.media-txt {
+    display: flex;
+    align-items: center;
+}
+.media-txt img {
+    border-radius: 50%;
+    width: 50%;
+}
 /*Footer*/
 footer {
     position: relative;
@@ -468,6 +475,14 @@ footer p {
     .menu-display {
         border-radius: 0 0 50% 50% !important;
         padding: 5px 0 5rem;;
+    }
+    /*About*/
+    .media-txt {
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+    .media-txt img, .media-txt p {
+        flex: 50%;
     }
 }    
 

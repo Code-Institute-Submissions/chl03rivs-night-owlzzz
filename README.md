@@ -141,7 +141,8 @@ steps to deploy
 
 * Unsplash for all images used on this site. Credit to photographers:
     * 
-    * 
+    * [Tyler Nix](https://unsplash.com/@nixcreative)
+    * [Khyati Trehan](https://unsplash.com/@khyatitrehan)
 * [Font Awesome](https://fontawesome.com/) for all the icons used on this site.
 * Canva for the design of the NightOwlzzz logo and favicon.
 * Favicon.io to generate the favicons of this project.
