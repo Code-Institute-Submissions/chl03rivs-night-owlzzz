@@ -48,9 +48,52 @@ Night Owlzzz is a cosy café-bar with loads to offer. It required a unique but s
 ----
 ### Color palette
 
+The initial colour palette was generated with xx was aiming for a night theme with golden and purple accents.
 
+![Original colour palette](./assets/docs/original-palette.webp)
+
+In order to ensure that our website is accessible, we had to rethink this palette a little, with the help of [WebAIM contrast checker](https://webaim.org/resources/contrastchecker/).
+
+The current palette conserves this dark blue and gold theme, reminiscent of a starry night sky, with the addition of a soft purple and pistachio green.
+
+![Website color palette](./assets/docs/colorpalette.webp)
+
+You can click on the colors below to expand the section and see the result of ratio for these colors:
+
+<details><summary> Dark blue: #0B0F3C  </summary>
+
+![Dark blue on gold ratior results](./assets/docs/contrast-ratio-blue-gold.webp)
+
+</details>
+<details>
+<summary>Gold: #F2A807  </summary>
+
+![Gold on dark blue ratio results](./assets/docs/contrast-ratio-gold-blue.webp)
+
+</details>
+<details>
+<summary>Soft purples: #8830b8 (on gold) and #9838CC (on dark blue)  </summary>
+
+Since this colour is only used for active list markers and the footer icons, it only needed to pass the "Graphical Objects and User Interface Components" category.
+
+![Ratio for the soft purple on gold](./assets/docs/purple-gold-objects.webp)
+
+![Ratio for the soft purple on dark blue](./assets/docs/purple-blue-objects.webp)
+
+</details>
+<details>
+<summary>Pistachio: #CBCB8D  </summary>
+
+
+![Ratio for dark blue text on pistachio](./assets/docs/contrast-ratio-blue-green.webp)
+
+</details>
 
 ### Typography
+
+The entire website uses the same font: [Kode Mono](https://fonts.google.com/specimen/Kode+Mono) from Google Fonts.
+
+It's a monospace font which contributes to the "retro" and "gaming" themes of the business.
 
 ### Imagery
 
@@ -77,16 +120,25 @@ footer
 * *Blog section* - to provide users with game tutorials and reviews for an enhanced in-person experience. 
     * I believe that this would be a helpful feature to have on the website as it would help visitors decide what game they would like to play before their visit. 
     * It would also make it easier for party members that are new to board games to learn ahead of time and enjoy their visit more.
-* *Form confirmation page* - to provide users with a confirmation message post form submission.
+* *Form confirmation page* or *pop-up* - to provide users with a confirmation message post form submission.
+
+***
+## Testing
+
+### Validator Testing
+
+* HTML testing - No errors were returned when passing through the official W3C validator
+
+* CSS testing - No errors were found when passing through the official (Jigsaw) validator
 
 ----
-##Technologies used
+## Technologies used
 -----
 
 * HTML
 * CSS
 
-###Frameworks, libraries, technologies and programs used
+### Frameworks, libraries, technologies and programs used
 
 * [Justinmind]() - used to create wireframes
 * [Canva]() - to create logo and favicon
@@ -94,23 +146,22 @@ footer
 * [Git]() - used for version control
 * [Google Fonts]() - to import website font
 * [Font Awesome]() - icons and their associated kit were downloaded from here
-* [My Color Space](https://mycolor.space) - for the color palette
-* 
+* [My Color Space](https://mycolor.space) - for the initial color palette
+* [WebAIM contrast checker](https://webaim.org/resources/contrastchecker/) - to create a more accessible color palette
 * [Favicon.io]() - to generate favicon files
 * [Google Dev Tools]() - to debug and test responsiveness
 * [Google Lighthouse]() - for auditing the website
 * [W3C Validator]() - for validating the HTML and CSS code
 
 -----
-##Deployment
+## Deployment
 ----
 
 steps to deploy
 
 ----
-##Testing
+## Testing
 ----
-###Initial testing plan
 
 ### Testing
 
@@ -125,9 +176,9 @@ steps to deploy
 ### Unsolved Bugs
 
 ---
-##Credits
+## Credits
 ----
-###Content references
+### Content references
 
 * All content written for the website is purely fictional, and for educational purposes only.
 * [Code Institute](https://codeinstitute.net) for their amazing modules on HTML and CSS.

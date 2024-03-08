@@ -12,16 +12,16 @@
     list-style-type: none;
     /*Borders*/
     border-block-width: 4px;
-    border-block-color: #c79306 ; /*Styles the top and bottom border line*/
-    border-inline-color: #c79306; /*Styles the left and right border line*/
+    border-block-color: #F2A807 ; /*Styles the top and bottom border line*/
+    border-inline-color: #F2A807; /*Styles the left and right border line*/
 }
 body {
     min-height: 100vh;
     width: 100%;
     display: flex;
     flex-direction: column;
-    background-color: #1a1d3f;
-    color: #c79306;
+    background-color: #0B0F3C;
+    color: #F2A807;
 }
 /*Flex properties*/
 .column-wrap {
@@ -72,7 +72,7 @@ p, details {
 }
 .color-pop {
     display: inline-block;
-    color: #1a1d3f;
+    color: #0B0F3C;
     background-color: #e190dd;
     padding: 0.5rem;
     border-radius: 20px;
@@ -88,10 +88,10 @@ li {
     text-decoration: none;
 }
 .clean-link {
-    color: #c79306;
+    color: #F2A807;
 }
 .clean-button a {
-    color: #1a1d3f;
+    color: #0B0F3C;
 }
 /*Buttons*/
 .clean-button {
@@ -111,8 +111,8 @@ li {
 }
 /*Button animation*/
 .button-animated {
-    background-color: #c79306;
-    color: #1a1d3f;
+    background-color: #F2A807;
+    color: #0B0F3C;
     border-radius: 10px;
 }
 .button-animated:hover {
@@ -125,14 +125,14 @@ li {
 }
 /*Crescent moon border*/
 .moon-border {
-    border-bottom: 3rem solid #c79306;
+    border-bottom: 3rem solid #F2A807;
     border-radius: 0 0 50% 50%;
 }
 /*Header*/
 header {
     z-index: 99;
     width: 100%;
-    background-color: #1a1d3f;
+    background-color: #0B0F3C;
     position: absolute;
     padding: 0 1rem 3rem;
     font-size: larger;
@@ -153,7 +153,7 @@ header {
     z-index: 99;
 }
 #nav-toggle:checked~#nav-icon {
-    background: rgba(36, 39, 72, 0.9);
+    background: rgba(11, 15, 60, 0.9);
     width: 100%;
     height: 100vh;
 }
@@ -204,7 +204,7 @@ nav li:hover {
     text-transform: uppercase;
 }
 .active {
-    color: #a80cc4;
+    color: #9838CC;
     text-decoration: underline;
 }
 /*Moon icon marker*/
@@ -225,7 +225,7 @@ main {
 hr {
     width: 60%;
     align-self: center;
-    border-block-color: #c79306;
+    border-block-color: #F2A807;
     margin: 2rem 0;
 }
 main li::marker {
@@ -244,7 +244,7 @@ main li::marker {
     position: absolute;
     z-index: 97;
     top: 17vh;
-    box-shadow: 0px -15px 15px 100px #1a1d3f;
+    box-shadow: 0px -15px 15px 100px #0B0F3C;
 }
 #hero-left {
     left: 2vw;
@@ -254,7 +254,7 @@ main li::marker {
 }
 .hero-text {
     position: absolute;
-    background: rgba(36, 39, 72, 0.9);
+    background: rgba(11, 15, 60, 0.9);
     padding: 2%;
     width: 30vw;
     border-radius: 20px;
@@ -263,7 +263,7 @@ main li::marker {
 }
 /*Containers*/
 .golden-box {
-    border: 1px solid #c79306;
+    border: 1px solid #F2A807;
     border-radius: 20px;
     padding: 0.5rem;
     margin: 2rem;
@@ -294,20 +294,20 @@ table {
     min-height: 15rem;
     width: 17rem;
     border-radius: 0 0 50% 50%;
-    border-bottom: 21px solid #c79306;
-    border-top: 1px solid #c79306;
+    border-bottom: 21px solid #F2A807;
+    border-top: 1px solid #F2A807;
     line-height: 20px;
 }
 .yellow-cards {
-    background-color: #c79306;
-    color: #1a1d3f;
+    background-color: #F2A807;
+    color: #0B0F3C;
 }
 .blue-cards {
-    background-color: #1a1d3f;
-    color: #c79306;
+    background-color: #0B0F3C;
+    color: #F2A807;
 }
 .rounded-cards {
-    background-color: #1a1d3f;
+    background-color: #0B0F3C;
     font-size: 1.2rem;
     margin: 1rem;
     padding: 1.5rem;
@@ -350,7 +350,7 @@ td:last-of-type {
     align-self: center;
 }
 #games-list table, #games-list th, #games-list td {
-    border: 2px solid #c79306;
+    border: 2px solid #F2A807;
 }
 #games-list th:nth-child(2), #games-list td:nth-child(2), #games-list th:nth-child(3), #games-list td:nth-child(3) {
     font-size: 16px;
@@ -367,11 +367,11 @@ details {
     align-self: center;
 }
 details[open] {
-    border: 2px dotted #c79306;
+    border: 2px dotted #F2A807;
 }
 /*Bookings page*/
 #booking-options {
-    background-color: #c79306;
+    background-color: #F2A807;
     padding: 1rem;
     border-radius: 20px;
 }
@@ -381,8 +381,8 @@ details[open] {
 /*Booking inquiry form*/
 #inquiry-form {
     width: 90%;
-    background-color: #c79306;
-    color: #1a1d3f;
+    background-color: #F2A807;
+    color: #0B0F3C;
     align-self: center;
     padding: 1rem;
     margin-bottom: 4rem;
@@ -397,13 +397,13 @@ input, textarea {
     padding-inline: 1rem;
     /*Properties to style the line of input boxes*/
     border-block-width: 4px;
-    border-block-color: #1a1d3f; /*Styles the top and bottom border line*/
-    border-inline-color: #1a1d3f; /*Styles the left and right border line*/
+    border-block-color: #0B0F3C; /*Styles the top and bottom border line*/
+    border-inline-color: #0B0F3C; /*Styles the left and right border line*/
 }
 .inquiry {
     line-height: 2;
-    border-block-color: #1a1d3f;
-    border-inline-color: #1a1d3f;
+    border-block-color: #0B0F3C;
+    border-inline-color: #0B0F3C;
     padding: 1rem;
     border-radius: 10px;
     background-color: rgba(204, 217, 175, 0.8);
@@ -427,8 +427,8 @@ input, textarea {
 /*Footer*/
 footer {
     position: relative;
-    background-color: #c79306;
-    color: #1a1d3f;
+    background-color: #F2A807;
+    color: #0B0F3C;
     justify-content: space-around;
     align-items: center;
 }
@@ -451,7 +451,7 @@ footer p {
 }
 #branding i {
     font-size: 160%;
-    color: #a80cc4;
+    color: #8830b8;
 }
 #branding p, #branding ul {
     display: inherit;
