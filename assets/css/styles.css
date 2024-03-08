@@ -20,7 +20,6 @@ body {
     width: 100%;
     display: flex;
     flex-direction: column;
-    /*Generic styles*/
     background-color: #1a1d3f;
     color: #c79306;
 }
@@ -61,8 +60,8 @@ legend {
 h2, h3, p {
     align-self: center;
 }
-p {
-    font-size: 22px;
+p, details {
+    font-size: 20px;
     line-height: 1.5;
     width: 70%;
     margin: 2rem;
@@ -124,7 +123,7 @@ li {
     box-shadow: 0 5px #aaaa5b;
     transform: translateY(4px);
 }
-/*Creates crescent moon shaped bottom border*/
+/*Crescent moon border*/
 .moon-border {
     border-bottom: 3rem solid #c79306;
     border-radius: 0 0 50% 50%;
@@ -142,11 +141,9 @@ header {
 }
 
 /*Navigation*/
-/*Makes the toggle button (checkbox) invisible*/
 #nav-toggle {
     display: none;
-}
-/*Adds background to the nav bar when toggled*/   
+}  
 #nav-toggle:checked~.nav-bar {
     display: grid;
     justify-content: start;
@@ -160,7 +157,6 @@ header {
     width: 100%;
     height: 100vh;
 }
-/*Fxes the display of the nav blocks in the expanded menu*/
 #nav-toggle:checked~.left-nav {
     position: fixed;
     order: 1;
@@ -173,7 +169,7 @@ header {
     position: fixed;
     top: 11rem;
 }
-/*Styles hamburger icon*/
+/*Hamburger icon*/
 #nav-icon {
     position: absolute;
     font-size: 2rem;
@@ -201,9 +197,8 @@ header {
 nav {
     display: none;
 }
-/*Makes link text grow bigger on hover*/
 nav li:hover {
-    transform: scale(1.1);
+    transform: scale(1.1);/*Makes link text grow bigger on hover*/
 }
 .nav-bar ul {
     text-transform: uppercase;
@@ -212,12 +207,11 @@ nav li:hover {
     color: #a80cc4;
     text-decoration: underline;
 }
-/*Moon icon for active link marker*/
+/*Moon icon marker*/
 .active::marker {
     font: var(--fa-font-regular);
     content: "\f186";
 }
-/*Reduces space between marker and active link*/
 .nav-bar li {
     padding: 0 20px 0 0;
     margin-left: 20px;
@@ -234,7 +228,6 @@ hr {
     border-block-color: #c79306;
     margin: 2rem 0;
 }
-/*Styles list items markers in main content*/
 main li::marker {
     font: var(--fa-font-regular);
     content: "\f186"; /*Font Awesome moon icon*/
@@ -246,22 +239,12 @@ main li::marker {
     align-items: center;
     justify-content: center;
 }
-/*Hero top overlay*/
-.blur-block {
+.blur-block { /*Hero top overlay*/
     width: 100%;
     position: absolute;
     z-index: 97;
     top: 17vh;
     box-shadow: 0px -15px 15px 100px #1a1d3f;
-}
-/*Hero text*/
-#hero-right, #hero-left {
-    position: absolute;
-    background: rgba(36, 39, 72, 0.9);
-    padding: 2%;
-    width: 30vw;
-    border-radius: 16%;
-    line-height: 1;
 }
 #hero-left {
     left: 2vw;
@@ -282,10 +265,14 @@ main li::marker {
 .golden-box {
     border: 1px solid #c79306;
     border-radius: 20px;
-    padding: 2rem;
+    padding: 0.5rem;
     margin: 2rem;
     width: 70%;
+    max-width: 100%;
     align-self: center;
+}
+table {
+    max-width: 100%;
 }
 /*Call to action*/
 .call-div {
@@ -365,6 +352,23 @@ td:last-of-type {
 #games-list table, #games-list th, #games-list td {
     border: 2px solid #c79306;
 }
+#games-list th:nth-child(2), #games-list td:nth-child(2), #games-list th:nth-child(3), #games-list td:nth-child(3) {
+    font-size: 16px;
+}
+/*FAQ*/
+details summary::-webkit-details-marker,
+details summary::marker {
+  display: none; 
+  font: var(--fa-font-regular);
+  content: "\f186";
+}
+details {
+    width: 70%;
+    align-self: center;
+}
+details[open] {
+    border: 2px dotted #c79306;
+}
 /*Bookings page*/
 #booking-options {
     background-color: #c79306;
@@ -372,7 +376,7 @@ td:last-of-type {
     border-radius: 20px;
 }
 #booking-options hr {
-    margin: 0.5rem; /*Reduces the space around the hr line*/
+    margin: 0.5rem;
 }
 /*Booking inquiry form*/
 #inquiry-form {
@@ -387,7 +391,6 @@ td:last-of-type {
 #inquiry-form label, #inquiry-form legend {
     font-size: calc(10px + 1vw);
 }
-/*Styles the form's input boxes*/
 input, textarea {
     background-color: rgba(199,147,6,0.4);
     border-radius: 10px;
@@ -440,7 +443,6 @@ footer p {
 #opening-hours {
     order: 3;
 }
-/*Social icons and bottom logo*/
 #branding {
     order: 2;
     padding: 20px 0;
@@ -458,7 +460,7 @@ footer p {
 }
 /* Media query: large/landscape phones (576px and up)*/
 @media screen and (min-width:576px) {
-    /*Reduces the size of the tagline text on larger screens to look cleaner*/
+    /*Index page*/
     #hero-right, #hero-left {
         font-size: 2.5vw;
     }
@@ -467,11 +469,9 @@ footer p {
         flex-wrap: nowrap;
     }
     .rounded-cards {
-        /*Makes each block take up an equal amount of space on bigger screens*/
         flex-basis: 33%;
     }
     /*Menu page*/
-    /*Re-enables the crescent moon bottom borders on larger screens*/
     .menu-display {
         border-radius: 0 0 50% 50% !important;
         padding: 5px 0 5rem;;
@@ -488,37 +488,29 @@ footer p {
 
 /*Media query for larger screens (1224px and up)*/
 @media screen and (min-device-width:1224px) {
-    /*Keeps nav links around logo in header*/
+    /*Header*/
     header {
         flex-wrap: nowrap;
     }
-    /*Removes toggle button and adds expanded nav*/
     #nav-icon, #nav-toggle {
         display: none;
     }
     nav {
         display: block;
     }
-    /*Add flex properties to nav elements*/
     .nav-bar ul {
         display: flex;
         flex-direction: row;
         position: relative;
     }
-    /*Adjusts navigation's font size*/
     .nav-bar {
         font-size: 170%;
     }
-    /*Ensures navigation appears in the right order around the logo*/
     .left-nav {
         order: 1;
     }
     .right-nav {
         order: 3;
-    }
-    /*Add more space between cards on desktop*/
-    #services-games, #services-bar, #services-books, #services-food, #services-wifi {
-        margin: 20px;
     }
     /*About*/
     #save-the-cat {
