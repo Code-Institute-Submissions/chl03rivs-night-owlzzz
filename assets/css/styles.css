@@ -355,10 +355,16 @@ td, th {
     justify-content: space-evenly;
     line-height: 1.5;
 } 
-.prices td:last-of-type {
+td:last-of-type {
     text-align-last: right;
 }
-
+/*Games*/
+#games-list {
+    align-self: center;
+}
+#games-list table, #games-list th, #games-list td {
+    border: 2px solid #c79306;
+}
 /*Bookings page*/
 #booking-options {
     background-color: #c79306;
@@ -413,7 +419,6 @@ footer {
     position: relative;
     background-color: #c79306;
     color: #1a1d3f;
-    /*Flex properties to space out footer content*/
     justify-content: space-around;
     align-items: center;
 }
@@ -432,19 +437,18 @@ footer p {
 #branding {
     order: 2;
     padding: 20px 0;
-    align-content: space-around;
-    text-align: center;
-    justify-content: space-between;        
+    text-align: center; 
+    align-content: center;   
 }
-#social-networks {
-    justify-content: space-between;
-}
-#social-networks i {
+#branding i {
     font-size: 160%;
-    padding: 5%;
     color: #a80cc4;
 }
-
+#branding p, #branding ul {
+    display: inherit;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
 /* Media query: large/landscape phones (576px and up)*/
 @media screen and (min-width:576px) {
     /*Reduces the size of the tagline text on larger screens to look cleaner*/
